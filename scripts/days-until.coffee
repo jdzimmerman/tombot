@@ -26,7 +26,7 @@ module.exports = (robot) ->
   robot.respond /how long until\s+(.*?)\??$/i, (msg) ->
     if robot.brain.data.days_until && robot.brain.data.days_until[msg.match[1]]
       date = robot.brain.data.days_until[msg.match[1]]
-      days_until = Math.floor((new Date - new Date(date).getTime()) / (1000*24*60*60))
+      days_until = Math.floor((new Date(date).getTime()) / (1000*24*60*60) - new Date)
       msg.send "it's " + days_until + " days until " + msg.match[1]
     else
       msg.send "I don't recall that event"
