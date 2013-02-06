@@ -15,7 +15,7 @@
 #   zenhob
 
 module.exports = (robot) ->
-  robot.respond /it's been (\d+) days since\s+(.*?)[.?!]?$/i, (msg) ->
+  robot.respond /it's been (\d+) days until\s+(.*?)[.?!]?$/i, (msg) ->
     date = new Date
     date.setTime(date.getTime() - (parseInt(msg.match[1])*1000*24*60*60))
     date.setHours(0,0,0,0)
@@ -23,7 +23,7 @@ module.exports = (robot) ->
     robot.brain.data.days_since[msg.match[2]] = date
     msg.send "okay, it's " + msg.match[1] + " days until " + msg.match[2]
 
-  robot.respond /how long since\s+(.*?)\??$/i, (msg) ->
+  robot.respond /how long until\s+(.*?)\??$/i, (msg) ->
     if robot.brain.data.days_since && robot.brain.data.days_since[msg.match[1]]
       date = robot.brain.data.days_since[msg.match[1]]
       days_since = Math.floor((new Date(date).getTime()) / (1000*24*60*60)) - new Date)
