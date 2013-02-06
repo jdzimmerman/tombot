@@ -31,4 +31,4 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         result = JSON.parse(body)
 
-        msg.send card_name + "'s average price is $" + result.cards[0].average
+        msg.send card_name + "'s average price is " + result.cards[0].average
