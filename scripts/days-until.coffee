@@ -17,7 +17,7 @@
 module.exports = (robot) ->
   robot.respond /it's (\d+) days until\s+(.*?)[.?!]?$/i, (msg) ->
     date = new Date
-    date.setTime((parseInt(msg.match[1])*1000*24*60*60) - date.getTime())
+    date.setTime(date.getTime() - (parseInt(msg.match[1])*1000*24*60*60))
     date.setHours(0,0,0,0)
     robot.brain.data.days_until ||= {}
     robot.brain.data.days_until[msg.match[2]] = date
