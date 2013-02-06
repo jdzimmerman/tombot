@@ -30,8 +30,9 @@ module.exports = (robot) ->
         cards : card_name
       .get() (err, res, body) ->
         result = JSON.parse(body)
-
-        if result.cards.length isnt 0
+        if card_name is "ben's mom"
+          msg.send "ben's mom is $0.01"
+        else if result.cards.length isnt 0
           msg.send card_name + "(" + result.cards[0].set_code + ") average price is $" + result.cards[0].average
         else
           msg.send "Sorry I do not have a price for " + card_name
