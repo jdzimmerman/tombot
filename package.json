@@ -18,7 +18,8 @@
     "hubot-hipchat": ">= 2.4.5",
     "hubot": ">=2.4.6",
     "hubot-scripts": ">= 2.4.1",
-    "optparse": "1.0.3"
+    "optparse": "1.0.3",
+    "cheerio": "0.7.0"
   },
   "engines": {
     "node": ">= 0.8.x",
