@@ -1,4 +1,17 @@
-# Outputs bot uptime
+# Description:
+#   None
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot uptime - Outputs bot uptime
+#
+# Author:
+#   whitman
 
 module.exports = (robot) ->
 
@@ -33,4 +46,3 @@ uptimeMe = (msg, start, cb) ->
     response = elements.join ', '
 
   cb 'I\'ve been sentient for ' + response
-
