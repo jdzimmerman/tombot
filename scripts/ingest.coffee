@@ -1,7 +1,17 @@
-# No Fucks Given
+# Description:
+#   Ingest
 #
-# no fuck - display a not a fuck was given meme
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   listen for "ingest"
+#
+# Author:
+#   ?
 
 no_fucks = [
   "http://hubot-assets.s3.amazonaws.com/ingest/1.gif",

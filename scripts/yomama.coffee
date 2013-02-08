@@ -1,6 +1,17 @@
-# Returns a random Yo Mama joke
+# Description:
+#   Returns a random Yo Mama joke
 #
-# yo mama joke me
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   yo mama joke me
+#
+# Author:
+#   adamstrawson
 
 module.exports = (robot) ->
   robot.respond /(yo\s?mama( joke)?)( me)?/i, (msg) ->
