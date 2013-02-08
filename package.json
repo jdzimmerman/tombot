@@ -15,7 +15,7 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "githubot": "0.2.0"
+    "githubot": "0.2.0",
     "hubot-hipchat": ">= 2.4.5",
     "hubot": ">=2.4.6",
     "hubot-scripts": ">= 2.4.1",
