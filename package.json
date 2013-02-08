@@ -23,7 +23,7 @@
     "hubot": ">=2.4.6",
     "hubot-scripts": ">= 2.4.1",
     "jsdom": "0.2.14",
-    "node-expat": "1.6.1"
+    "node-expat": "1.6.1",
     "optparse": "1.0.3",
     "redis": "0.7.2",
     "soupselect": "0.2.0",
