@@ -1,32 +1,16 @@
-# Description:
-#   Allows Hubot to lambast someone with a random insult
-#
-# Dependencies:
-#   "cheerio: "0.7.0"
-#
-# Configuration:
-#   None
-#
-# Commands:
-#   hubot insult <name> - give <name> the what-for
-#
-# Author:
-#   ajacksified, brandonvalentine
-
-cheerio = require('cheerio')
+# insult <name> - give <name> the what-for
 
 module.exports = (robot) ->
   robot.respond /insult (.*)/i, (msg) ->
     name = msg.match[1].trim()
-    insult(msg, name)
+    msg.send(insult(name))
 
-insult = (msg, name) ->
-  msg
-    .http("http://www.randominsults.net")
-    .header("User-Agent: Insultbot for Hubot (+https://github.com/github/hubot-scripts)")
-    .get() (err, res, body) ->
-      msg.send "#{name}: #{getQuote body}"
+insult = (name) ->
+  insults[(Math.random() * insults.length) >> 0].replace(/{name}/, name);
 
-getQuote = (body) ->
-  $ = cheerio.load(body)
-  $('i').text()
+insults = [
+  "{name} is a scoundrel.",
+  "{name} should be ashamed of himself.",
+  "{name} is a motherless son of a goat.",
+  "{name} is a gravy-sucking pig."
+]

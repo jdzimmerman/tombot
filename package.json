@@ -15,11 +15,18 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
+    "githubot": "0.2.0"
     "hubot-hipchat": ">= 2.4.5",
     "hubot": ">=2.4.6",
     "hubot-scripts": ">= 2.4.1",
     "optparse": "1.0.3",
-    "cheerio": "0.7.0"
+    "cheerio": "0.7.0",
+    "xml2js": "0.1.14",
+    "redis": "0.7.2",
+    "cradle": "0.6.3",
+    "soupselect": "0.2.0",
+    "jsdom": "0.2.14",
+    "node-expat": "1.6.1"
   },
   "engines": {
     "node": ">= 0.8.x",
