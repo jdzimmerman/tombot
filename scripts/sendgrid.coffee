@@ -1,11 +1,20 @@
-# Basic SendGrid statistics.
+# Description:
+#   Basic SendGrid statistics.
 #
-# Set HUBOT_SENDGRID_USER to your SendGrid username (the same as you use to log in to sendgrid.com)
-# Set HUBOT_SENDGRID_KEY to your SendGrid password (the same as you use to log in to sendgrid.com)
+# Dependencies:
+#   None
 #
-# sendgrid total - total sendgrid usage for the account
-# sendgrid today - Total usage for today
-# sendgrid c[ategory] <category> - Today's usage for the given category
+# Configuration:
+#   Set HUBOT_SENDGRID_USER to your SendGrid username (the same as you use to log in to sendgrid.com)
+#   Set HUBOT_SENDGRID_KEY to your SendGrid password (the same as you use to log in to sendgrid.com)
+#
+# Commands:
+#   sendgrid total - total sendgrid usage for the account
+#   sendgrid today - Total usage for today
+#   sendgrid c[ategory] <category> - Today's usage for the given category
+#
+# Author:
+#   Travis Berry?
 
 env = process.env
   
