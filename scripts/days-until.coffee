@@ -28,9 +28,11 @@ module.exports = (robot) ->
       days_since = Math.floor((new Date(date).getTime() - new Date) / (1000*24*60*60))
       if days_since == 0
       	msg.send msg.match[1] + " is today!"
+      else if days_since == 1
+        msg.send msg.match[1] + " is tomorrow!"
       else if days_since < 0
       	msg.send msg.match[1] + " already happened."
       else
-      	msg.send "it's " + days_since + " day(s) until " + msg.match[1]
+      	msg.send "it's " + days_since + " days until " + msg.match[1]
     else
       msg.send "I don't recall that event"
