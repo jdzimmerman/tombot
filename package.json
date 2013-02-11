@@ -30,7 +30,9 @@
     "sandbox": "0.8.3",
     "scribe-node": ">=0.0.24",
     "soupselect": "0.2.0",
-    "xml2js": "0.1.14"
+    "xml2js": "0.1.14",
+    "wolfram": "0.2.2",
+    "wwwdude": "0.1.0"
   },
   "engines": {
     "node": ">= 0.8.x",
