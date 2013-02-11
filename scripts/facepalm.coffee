@@ -1,21 +1,37 @@
-# Carlton Celebration
+# Description:
+#   Clearly illustrate with an image what people mean whenever they say "facepalm"
 #
-# dance - Display a dancing Carlton
+# Dependencies:
+#   None
 #
-
-carltons = [
-  "http://hubot-assets.s3.amazonaws.com/facepalm/1.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/2.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/3.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/4.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/5.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/6.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/7.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/8.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/9.gif",
-  "http://hubot-assets.s3.amazonaws.com/facepalm/10.gif"
-]
+# Configuration:
+#   None
+#
+# Commands:
+#
+# Author:
+#   jimeh
 
 module.exports = (robot) ->
-  robot.hear /.*(face palm|facepalm).*/i, (msg) ->
-    msg.send msg.random carltons
+  robot.hear /facepalm/i, (msg) ->
+    # Randomly use facepalm.org or a Google Image search for "facepalm".
+    if msg.random([0, 1])
+      facepalmMe msg, (url) ->
+        msg.send url
+    else
+      imageMe msg, "facepalm", (url) ->
+        msg.send url
+
+facepalmMe = (msg, cb) ->
+  msg.http('http://facepalm.org/img.php').get() (err, res, body) ->
+    cb "http://facepalm.org/#{res.headers['location']}#.png"
+
+imageMe = (msg, query, cb) ->
+  msg.http('http://ajax.googleapis.com/ajax/services/search/images')
+    .query(v: "1.0", rsz: '8', q: query, safe: 'active')
+    .get() (err, res, body) ->
+      images = JSON.parse(body)
+      images = images.responseData.results
+      if images.length > 0
+        image  = msg.random images
+        cb "#{image.unescapedUrl}#.png"
