@@ -1,19 +1,29 @@
-HUBOT_JENKINS_URL = "http://localhost:8080"
-#HUBOT_JENKINS_AUTH = "63b5811076cf31ae7e92d8e0b87ebf88"
-#HUBOT_JENKINS_AUTH = "ninetwentyfour:221westwood"
-
-# Interact with your jenkins CI server, assumes you have a parameterized build
-# with the branch to build as a parameter
+# Description:
+#   Interact with your jenkins CI server, assumes you have a parameterized build
+#   with the branch to build as a parameter
 #
-# You need to set the following variables:
+# Dependencies:
+#   "wwwdude": "0.1.0"
+#
+# Configuration:
+#  HUBOT_JENKINS_AUTH = "63b5811076cf31ae7e92d8e0b87ebf88"
+#  HUBOT_JENKINS_AUTH = "ninetwentyfour:221westwood"
+#
+#  You need to set the following variables:
 #   HUBOT_JENKINS_URL = "http://ci.example.com:8080"
 # 
-# The following variables are optional
+#  The following variables are optional
 #   HUBOT_JENKINS_JOB - if not set you will have to specify job name every time
 #   HUBOT_JENKINS_BRANCH_PARAMETER_NAME - if not set is assumed to be BRANCH_SPECIFIER
 #
-# build branch master -- starts a build for branch origin/master
-# build branch master on job Foo -- starts a build for branch origin/master on job Foo
+# Commands:
+#   build branch master -- starts a build for branch origin/master
+#   build branch master on job Foo -- starts a build for branch origin/master on job Foo
+#
+# Author:
+#   Travis Berry
+HUBOT_JENKINS_URL = "http://localhost:8080"
+
 hackers = [
   "http://hubot-assets.s3.amazonaws.com/science/1.gif",
   "http://hubot-assets.s3.amazonaws.com/science/2.gif",
