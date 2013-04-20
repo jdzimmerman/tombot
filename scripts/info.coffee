@@ -43,4 +43,4 @@ infomercial = [
 
 module.exports = (robot) ->
   robot.respond /info me/i, (msg) ->
-    msg.send msg.random infomercial
+    msg.reply msg.random infomercial
