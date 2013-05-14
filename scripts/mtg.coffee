@@ -32,6 +32,8 @@ module.exports = (robot) ->
         result = JSON.parse(body)
         if card_name is "ben's mom"
           msg.send "ben's mom is $0.01"
+        else if  card_name is "ben's trainer"
+          msg.send "ben's trainer is $60.00 too much"
         else if result.cards.length isnt 0
           msg.send card_name + " (" + result.cards[0].set_code + ") average price is $" + result.cards[0].average
         else
