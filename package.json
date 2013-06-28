@@ -27,6 +27,7 @@
     "jsdom": "0.2.14",
     "node-expat": "1.6.1",
     "nodepie": "0.5.0",
+    "ntwitter" : "https://github.com/sebhildebrandt/ntwitter/tarball/master",
     "optparse": "1.0.3",
     "querystring" : "",
     "redis": "0.7.2",
