@@ -1,6 +1,6 @@
 {
   "name": "hosted-hubot",
-  "version": "2.4.6",
+  "version": "2.5.3",
   "author": "GitHub Inc.",
   "keywords": "github hubot campfire bot",
   "description": "A simple helpful Robot for your Company",
@@ -21,16 +21,16 @@
     "githubot": "0.2.0",
     "gitio": "1.0.1",
     "htmlparser": "1.7.6",
-    "hubot-hipchat": ">= 2.4.5",
-    "hubot": ">=2.4.6",
-    "hubot-scripts": ">= 2.4.1",
+    "hubot-hipchat": "2.5.1-4",
+    "hubot": "2.5.1",
+    "hubot-scripts": ">= 2.4.6",
     "jsdom": "0.2.14",
     "node-expat": "1.6.1",
     "nodepie": "0.5.0",
     "ntwitter" : "https://github.com/sebhildebrandt/ntwitter/tarball/master",
     "optparse": "1.0.3",
     "querystring" : "",
-    "redis": "0.7.2",
+    "redis": "0.8.2",
     "sandbox": "0.8.3",
     "scribe-node": ">=0.0.24",
     "soupselect": "0.2.0",
@@ -42,7 +42,7 @@
     "wwwdude": "0.1.0"
   },
   "engines": {
-    "node": "= 0.8.21",
+    "node": ">= 0.8.x",
     "npm": "1.1.x"
   }
 }
