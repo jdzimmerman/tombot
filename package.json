@@ -30,7 +30,6 @@
     "ntwitter" : "https://github.com/sebhildebrandt/ntwitter/tarball/master",
     "optparse": "1.0.3",
     "querystring" : "",
-    "redis": "0.7.2",
     "sandbox": "0.8.3",
     "scribe-node": ">=0.0.24",
     "soupselect": "0.2.0",
