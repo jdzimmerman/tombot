@@ -38,7 +38,20 @@ infomercial = [
   "http://i.imgur.com/sWmiSyL.gif",
   "http://i.imgur.com/e5AUbYx.gif",
   "http://i.imgur.com/93QH9ct.gif",
-  "http://i.imgur.com/kWtVTWp.gif"
+  "http://i.imgur.com/kWtVTWp.gif",
+  "http://media.heavy.com/media/2013/04/AqkJn.gif",
+  "http://media.heavy.com/media/2013/04/aNvsU.gif",
+  "http://25.media.tumblr.com/tumblr_mcoqsuBUvW1rje5o6o1_250.gif",
+  "http://24.media.tumblr.com/328ed6f958bc4c37a1ad16858c9f1620/tumblr_mk18ez68Lh1qjf4x5o1_r2_250.gif",
+  "http://weknowgifs.com/wp-content/uploads/2013/03/informercial-gif-guy-putting-on-shoe.gif",
+  "http://25.media.tumblr.com/tumblr_mcdkb8wk4X1qh8t5wo9_250.gif",
+  "http://media.heavy.com/media/2013/04/9CnFy.gif",
+  "http://25.media.tumblr.com/tumblr_mdf2i231dH1rje5o6o1_400.gif",
+  "http://i.imgur.com/V7QDjLm.gif",
+  "http://rack.1.mshcdn.com/media/ZgkyMDEzLzAzLzI0LzBmL2FmbDlMbE0xLjZmN2I3LmdpZgpwCXRodW1iCTEyMDB4OTYwMD4/8b6c7760/7f2/afl9LlM1.gif",
+  "http://rack.3.mshcdn.com/media/ZgkyMDEzLzAzLzI0LzA4L3lkbU1pUmkuODkwNzIuZ2lmCnAJdGh1bWIJMTIwMHg5NjAwPg/9f2d315a/604/ydmMiRi.gif",
+  "http://mashable.com/wp-content/uploads/2013/03/9eyaAQW.gif",
+  "http://i.imgur.com/aTDcl.gif"
 ]
 
 module.exports = (robot) ->
