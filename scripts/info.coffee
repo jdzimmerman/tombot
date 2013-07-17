@@ -51,7 +51,9 @@ infomercial = [
   "http://rack.1.mshcdn.com/media/ZgkyMDEzLzAzLzI0LzBmL2FmbDlMbE0xLjZmN2I3LmdpZgpwCXRodW1iCTEyMDB4OTYwMD4/8b6c7760/7f2/afl9LlM1.gif",
   "http://rack.3.mshcdn.com/media/ZgkyMDEzLzAzLzI0LzA4L3lkbU1pUmkuODkwNzIuZ2lmCnAJdGh1bWIJMTIwMHg5NjAwPg/9f2d315a/604/ydmMiRi.gif",
   "http://mashable.com/wp-content/uploads/2013/03/9eyaAQW.gif",
-  "http://i.imgur.com/aTDcl.gif"
+  "http://i.imgur.com/aTDcl.gif",
+  "http://i.imgur.com/iBfDL.gif",
+  "http://i.imgur.com/oT2CN.gif"
 ]
 
 module.exports = (robot) ->
