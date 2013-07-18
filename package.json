@@ -25,6 +25,7 @@
     "hubot": "2.5.1",
     "hubot-scripts": ">= 2.4.6",
     "jsdom": "0.2.14",
+    "mandrill-api": ">=1.0.2",
     "node-expat": "1.6.1",
     "nodepie": "0.5.0",
     "ntwitter" : "https://github.com/sebhildebrandt/ntwitter/tarball/master",
