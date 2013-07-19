@@ -19,6 +19,11 @@
 util = require 'util'
 child_process = require 'child_process'
 http = require 'http'
+url_options =
+  hostname: "http://mandrillapp.com"
+  path: "/api/1.0/messages/send.json"
+  method: "POST"
+  agent: "Mandrill-Curl/1.0"
 
 module.exports = (robot) ->
   emailTime = null
