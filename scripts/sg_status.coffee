@@ -36,4 +36,4 @@ module.exports = (robot) ->
 
   robot.respond /status (.*)/i, (msg) ->
     sendEmail msg.match[1], msg.message.user.name
-    msg.reply "Status emailed. (fuckyeah)"
+    msg.reply "Status emailed: #{answer} (fuckyeah)"
