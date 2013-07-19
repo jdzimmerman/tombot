@@ -18,6 +18,7 @@
 
 util = require 'util'
 child_process = require 'child_process'
+http = require 'http'
 
 module.exports = (robot) ->
   emailTime = null
