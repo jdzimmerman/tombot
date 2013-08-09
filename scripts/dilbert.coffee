@@ -20,7 +20,7 @@ module.exports = (robot) ->
     dilbertRss msg, (url) ->
       msg.send url
 
-dilbertRegexp = /src=(.*.gif)/i
+dilbertRegexp = /src=\"(.*.gif)\"/i
 dilbertRss = (msg, cb) ->
   msg.http('http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss')
     .get() (err, resp, body) ->
