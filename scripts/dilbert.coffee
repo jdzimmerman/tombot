@@ -20,9 +20,9 @@ module.exports = (robot) ->
     dilbertRss msg, (url) ->
       msg.send url
 
-dilbertRegexp = /img src="(http:\/\/dilbert.com\/[^"]+)"/i
+dilbertRegexp = /src="(http:\/\/dilbert.com\/[^"]+)"/i
 dilbertRss = (msg, cb) ->
-  msg.https('https://kimmo.suominen.com/stuff/dilbert.xml')
+  msg.http('http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss')
     .get() (err, resp, body) ->
       handler = new htmlparser.RssHandler (error, dom) ->
         return if error || !dom
