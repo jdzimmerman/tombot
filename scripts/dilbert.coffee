@@ -20,14 +20,14 @@ module.exports = (robot) ->
     dilbertRss msg, (url) ->
       msg.send url
 
-dilbertRegexp = /src=(.*.gif)/i
+dilbertRegexp = /src=&quot;(.*.gif)/i
 dilbertRss = (msg, cb) ->
   msg.http('http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss')
     .get() (err, resp, body) ->
       handler = new htmlparser.RssHandler (error, dom) ->
         return if error || !dom
         item = dom.items[0]
-        match = item.description.match(dilbertRegexp).replace(/"/g, '')
+        match = item.description.match(dilbertRegexp)
         cb match[1] if match
 
       parser = new htmlparser.Parser(handler)
