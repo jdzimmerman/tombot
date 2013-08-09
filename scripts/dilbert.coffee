@@ -22,7 +22,7 @@ module.exports = (robot) ->
 
 dilbertRegexp = /img src="(http:\/\/dilbert.com\/[^"]+)"/i
 dilbertRss = (msg, cb) ->
-  msg.http('https://kimmo.suominen.com/stuff/dilbert.xml')
+  msg.https('https://kimmo.suominen.com/stuff/dilbert.xml')
     .get() (err, resp, body) ->
       handler = new htmlparser.RssHandler (error, dom) ->
         return if error || !dom
