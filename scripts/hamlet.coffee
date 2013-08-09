@@ -43,5 +43,5 @@ hamlets = [
 	"So full of artless jealousy is guilt, It spills itself in fearing to be spilt."
 ]
 module.exports = (robot) ->
-  robot.hear /\b(@hamlet)\b/i, (msg) ->
-    msg.send "/quote" + msg.random hamlets
+  robot.hear /@hamlet/i, (msg) ->
+    msg.send msg.random hamlets
