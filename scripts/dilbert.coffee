@@ -32,3 +32,4 @@ dilbertRss = (msg, cb) ->
 
       parser = new htmlparser.Parser(handler)
       parser.parseComplete(body)
+      
