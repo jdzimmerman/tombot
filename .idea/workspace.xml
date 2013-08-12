@@ -2,15 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/hackernews.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wolfram.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/9gag.coffee" afterPath="$PROJECT_DIR$/scripts/9gag.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/achievement_unlocked.coffee" afterPath="$PROJECT_DIR$/scripts/achievement_unlocked.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ackbar.coffee" afterPath="$PROJECT_DIR$/scripts/ackbar.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/animal.coffee" afterPath="$PROJECT_DIR$/scripts/animal.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ascii.coffee" afterPath="$PROJECT_DIR$/scripts/ascii.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/carlton.coffee" afterPath="$PROJECT_DIR$/scripts/carlton.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/cheer.coffee" afterPath="$PROJECT_DIR$/scripts/cheer.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/chuck-norris.coffee" afterPath="$PROJECT_DIR$/scripts/chuck-norris.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/coin.coffee" afterPath="$PROJECT_DIR$/scripts/coin.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/commitmessage.coffee" afterPath="$PROJECT_DIR$/scripts/commitmessage.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/days-since.coffee" afterPath="$PROJECT_DIR$/scripts/days-since.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/days-until.coffee" afterPath="$PROJECT_DIR$/scripts/days-until.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/deadline.coffee" afterPath="$PROJECT_DIR$/scripts/deadline.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/defprogramming.coffee" afterPath="$PROJECT_DIR$/scripts/defprogramming.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/dice.coffee" afterPath="$PROJECT_DIR$/scripts/dice.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/dilbert.coffee" afterPath="$PROJECT_DIR$/scripts/dilbert.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/do-it-live.coffee" afterPath="$PROJECT_DIR$/scripts/do-it-live.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/eight-ball.coffee" afterPath="$PROJECT_DIR$/scripts/eight-ball.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/facepalm.coffee" afterPath="$PROJECT_DIR$/scripts/facepalm.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/gemwhois.coffee" afterPath="$PROJECT_DIR$/scripts/gemwhois.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/giphy.coffee" afterPath="$PROJECT_DIR$/scripts/giphy.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/gitlab.coffee" afterPath="$PROJECT_DIR$/scripts/gitlab.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/google-images.coffee" afterPath="$PROJECT_DIR$/scripts/google-images.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/google-search-api.coffee" afterPath="$PROJECT_DIR$/scripts/google-search-api.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/hamlet.coffee" afterPath="$PROJECT_DIR$/scripts/hamlet.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/happening.coffee" afterPath="$PROJECT_DIR$/scripts/happening.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/help.coffee" afterPath="$PROJECT_DIR$/scripts/help.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/heroku-status.coffee" afterPath="$PROJECT_DIR$/scripts/heroku-status.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/httpd.coffee" afterPath="$PROJECT_DIR$/scripts/httpd.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/hubot" afterPath="$PROJECT_DIR$/bin/hubot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/hubotagainsthumanity.coffee" afterPath="$PROJECT_DIR$/scripts/hubotagainsthumanity.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/info.coffee" afterPath="$PROJECT_DIR$/scripts/info.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/insult.coffee" afterPath="$PROJECT_DIR$/scripts/insult.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/javascript-sandbox.coffee" afterPath="$PROJECT_DIR$/scripts/javascript-sandbox.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jenkins.coffee" afterPath="$PROJECT_DIR$/scripts/jenkins.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="$PROJECT_DIR$/scripts/jira-issues.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/keep-alive.coffee" afterPath="$PROJECT_DIR$/scripts/keep-alive.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/kittens.coffee" afterPath="$PROJECT_DIR$/scripts/kittens.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lolz.coffee" afterPath="$PROJECT_DIR$/scripts/lolz.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/look-of-disapproval.coffee" afterPath="$PROJECT_DIR$/scripts/look-of-disapproval.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lyrics.coffee" afterPath="$PROJECT_DIR$/scripts/lyrics.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/meme-captain.coffee" afterPath="$PROJECT_DIR$/scripts/meme-captain.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/mtg.coffee" afterPath="$PROJECT_DIR$/scripts/mtg.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/news.coffee" afterPath="$PROJECT_DIR$/scripts/news.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/oauth.coffee" afterPath="$PROJECT_DIR$/scripts/oauth.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/octocat.coffee" afterPath="$PROJECT_DIR$/scripts/octocat.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/penny-arcade.coffee" afterPath="$PROJECT_DIR$/scripts/penny-arcade.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/pugme.coffee" afterPath="$PROJECT_DIR$/scripts/pugme.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/punchfork.coffee" afterPath="$PROJECT_DIR$/scripts/punchfork.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/quote.coffee" afterPath="$PROJECT_DIR$/scripts/quote.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/reddit.coffee" afterPath="$PROJECT_DIR$/scripts/reddit.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/remind.coffee" afterPath="$PROJECT_DIR$/scripts/remind.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/resque.coffee" afterPath="$PROJECT_DIR$/scripts/resque.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/roles.coffee" afterPath="$PROJECT_DIR$/scripts/roles.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/roll.coffee" afterPath="$PROJECT_DIR$/scripts/roll.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/rotten.coffee" afterPath="$PROJECT_DIR$/scripts/rotten.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/rubygems.coffee" afterPath="$PROJECT_DIR$/scripts/rubygems.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/script.coffee" afterPath="$PROJECT_DIR$/scripts/script.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sendgrid.coffee" afterPath="$PROJECT_DIR$/scripts/sendgrid.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sg_status.coffee" afterPath="$PROJECT_DIR$/scripts/sg_status.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/shipit.coffee" afterPath="$PROJECT_DIR$/scripts/shipit.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/shorten.coffee" afterPath="$PROJECT_DIR$/scripts/shorten.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sms.coffee" afterPath="$PROJECT_DIR$/scripts/sms.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/spotify.coffee" afterPath="$PROJECT_DIR$/scripts/spotify.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/stocks.coffee" afterPath="$PROJECT_DIR$/scripts/stocks.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sudo.coffee" afterPath="$PROJECT_DIR$/scripts/sudo.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sweetdude.coffee" afterPath="$PROJECT_DIR$/scripts/sweetdude.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/talkative.coffee" afterPath="$PROJECT_DIR$/scripts/talkative.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/tasks.coffee" afterPath="$PROJECT_DIR$/scripts/tasks.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/tell.coffee" afterPath="$PROJECT_DIR$/scripts/tell.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/tvshow.coffee" afterPath="$PROJECT_DIR$/scripts/tvshow.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/twitter.coffee" afterPath="$PROJECT_DIR$/scripts/twitter.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/uptime.coffee" afterPath="$PROJECT_DIR$/scripts/uptime.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/urban.coffee" afterPath="$PROJECT_DIR$/scripts/urban.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/walmart.coffee" afterPath="$PROJECT_DIR$/scripts/walmart.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/weather.coffee" afterPath="$PROJECT_DIR$/scripts/weather.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/whos-turn.coffee" afterPath="$PROJECT_DIR$/scripts/whos-turn.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/wikipedia.coffee" afterPath="$PROJECT_DIR$/scripts/wikipedia.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/word-of-the-day.coffee" afterPath="$PROJECT_DIR$/scripts/word-of-the-day.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/wordnik.coffee" afterPath="$PROJECT_DIR$/scripts/wordnik.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/wtf.coffee" afterPath="$PROJECT_DIR$/scripts/wtf.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/xkcd.coffee" afterPath="$PROJECT_DIR$/scripts/xkcd.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/yoda-pictures.coffee" afterPath="$PROJECT_DIR$/scripts/yoda-pictures.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/yoda-quotes.coffee" afterPath="$PROJECT_DIR$/scripts/yoda-quotes.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/yomama.coffee" afterPath="$PROJECT_DIR$/scripts/yomama.coffee" />
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376321912155" ignored="false" />
+<<<<<<< HEAD
     <file path="/hubot" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376337810110" ignored="false" />
     <file path="$PROJECT_DIR$/node_modules/hubot-hipchat/package.json" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376338697105" ignored="false" />
     <file path="$PROJECT_DIR$/node_modules/hubot-hipchat/node_modules/node-xmpp/node_modules/ltx/node_modules/sax/examples/big-not-pretty.xml" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376338697106" ignored="false" />
+=======
+    <file path="/hubot" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376331805893" ignored="false" />
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +125,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="tell.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/tell.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="15" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.0">
+=======
+      <file leaf-file-name="hubot-scripts.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="76" selection-start="433" selection-end="433" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.65319866">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
               <folding />
             </state>
           </provider>
@@ -66,10 +186,17 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="info.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.84">
+=======
+      <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
               <folding />
             </state>
           </provider>
@@ -78,21 +205,33 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/README.md">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="26" column="132" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+=======
+            <state line="13" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="hubot-scripts.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+      <file leaf-file-name="sendgrid.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="19.72">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,6 +245,12 @@
         <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/src/connector.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="348" column="77" selection-start="12759" selection-end="12766" vertical-scroll-proportion="-102.35294">
+=======
+      <file leaf-file-name="hubot" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/hubot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
               <folding />
             </state>
           </provider>
@@ -130,8 +275,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/bin/hubot" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/rybot/bin/hubot" />
         <option value="$PROJECT_DIR$/rybot/Procfile" />
+=======
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
       </list>
     </option>
   </component>
@@ -185,6 +333,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
+=======
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
         </subPane>
       </pane>
     </panes>
@@ -303,6 +482,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="19.72">
@@ -327,69 +507,128 @@
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/hamlet.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.44">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/tell.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="15" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/src/connector.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="348" column="77" selection-start="12759" selection-end="12766" vertical-scroll-proportion="-102.35294">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.84">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="324" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="132" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external-scripts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/scripts/hamlet.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.44">
+=======
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/scripts/tell.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="15" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="19.72">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/src/connector.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="77" selection-start="12759" selection-end="12766" vertical-scroll-proportion="-102.35294">
+=======
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="324" selection-end="340" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.84">
+=======
+    <entry file="file://$PROJECT_DIR$/bin/hubot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="324" selection-end="340" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="76" selection-start="433" selection-end="433" vertical-scroll-proportion="-5.625">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/node_modules/hubot-hipchat/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="132" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.4">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/external-scripts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/scripts/hamlet.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.44">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.65319866">
+>>>>>>> 0737089cab6843745d48f263a752f26e897c8ed7
           <folding />
         </state>
       </provider>
