@@ -40,7 +40,21 @@ hamlets = [
 	"/quote To be honest, as this world goes, is to be one man picked out of ten thousand.",
 	"/quote Something is rotten in the state of Denmark.",
 	"/quote I must be cruel only to be kind; bad begins, and worse remains behind.",
-	"/quote So full of artless jealousy is guilt, It spills itself in fearing to be spilt."
+	"/quote So full of artless jealousy is guilt, It spills itself in fearing to be spilt.",
+	"/quote Get thee to a nunnery, go.",
+	"/quote Twere good she were spoken with, for she may strew dangerous conjectures in ill-breeding minds.",
+	"/quote Quoth she Before you tumbled me, you promis'd me to wed.",
+	"/quote Let in the maid that out a maid never departed more.",
+	"/quote Your fat king and your lean begger is but variable service.",
+	"/quote To hell, allegiance! Vows to the blackest devil! Conscience and grace, to the profoundest pit! I dare damnation.",
+	"/quote Roughly awake, I here proclaim was madness. Was't Hamlet wronged? Never Hamlet.",
+	"/quote I shall in all my best obey you, madam.",
+	"/quote How is it that the clouds still hang on you?",
+	"/quote With such dexterity to incestuous sheets!",
+	"/quote A little more than kin and less than kind.",
+	"/quote Do not forever with thy veiled lids seek for thy noble father in the dust.",
+	"/quote How weary, stale, flat, and unprofitable seem to me all the uses of this world!"
+	
 ]
 module.exports = (robot) ->
   robot.hear /@hamlet/i, (msg) ->
