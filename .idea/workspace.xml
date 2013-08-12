@@ -1,177 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/9gag.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/achievement_unlocked.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/ackbar.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/animal.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/ascii.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/carlton.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/cheer.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/chuck-norris.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/coin.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/commitmessage.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/days-since.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/days-until.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/deadline.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/defprogramming.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/dice.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/dilbert.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/do-it-live.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/eight-ball.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/facepalm.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/gemwhois.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/giphy.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/gitlab.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/google-images.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/google-search-api.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/hackernews.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/hamlet.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/happening.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/help.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/heroku-status.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/httpd.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/hubotagainsthumanity.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/info.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/insult.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/javascript-sandbox.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/jenkins.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/jira-issues.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/keep-alive.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/kittens.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/lolz.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/look-of-disapproval.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/lyrics.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/meme-captain.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/mtg.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/news.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/oauth.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/octocat.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/penny-arcade.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/pugme.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/punchfork.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/quote.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/reddit.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/remind.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/resque.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/roles.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/roll.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/rotten.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/rubygems.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/script.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/sendgrid.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/sg_status.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/shipit.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/shorten.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/sms.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/spotify.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/stocks.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/sudo.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/sweetdude.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/talkative.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/tasks.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/tell.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/tvshow.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/twitter.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/uptime.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/urban.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/walmart.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/weather.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/whos-turn.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/wikipedia.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/wolfram.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/word-of-the-day.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/wordnik.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/wtf.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/xkcd.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/yoda-pictures.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/yoda-quotes.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts copy/yomama.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/9gag.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/achievement_unlocked.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/ackbar.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/animal.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/ascii.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/carlton.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/cheer.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/chuck-norris.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/coin.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/commitmessage.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/days-since.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/days-until.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/deadline.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/defprogramming.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/dice.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/dilbert.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/do-it-live.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/eight-ball.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/facepalm.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/gemwhois.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/giphy.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/gitlab.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/google-images.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/google-search-api.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/hamlet.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/happening.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/help.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/heroku-status.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/httpd.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/hubotagainsthumanity.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/insult.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/javascript-sandbox.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jenkins.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/keep-alive.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/kittens.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/lolz.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/look-of-disapproval.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/lyrics.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/meme-captain.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/mtg.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/news.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/oauth.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/octocat.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/penny-arcade.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/pugme.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/punchfork.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/quote.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/reddit.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/remind.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/resque.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/roles.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/roll.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/rotten.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/rubygems.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/script.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/sendgrid.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/sg_status.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/shipit.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/shorten.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/sms.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/spotify.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/stocks.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/sudo.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/sweetdude.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/talkative.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/tasks.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/tell.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/tvshow.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/twitter.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/uptime.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/urban.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/walmart.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/weather.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/whos-turn.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wikipedia.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/word-of-the-day.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wordnik.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wtf.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/xkcd.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/yoda-pictures.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/yoda-quotes.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/yomama.coffee" afterPath="" />
-    </list>
+    <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="" />
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376321912155" ignored="false" />
@@ -314,6 +144,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tombot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
