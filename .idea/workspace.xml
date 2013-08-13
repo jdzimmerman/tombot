@@ -12,7 +12,7 @@
     <file path="$PROJECT_DIR$/node_modules/hubot-hipchat/node_modules/node-xmpp/node_modules/ltx/node_modules/sax/examples/big-not-pretty.xml" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376338697106" ignored="false" />
     <file path="$PROJECT_DIR$/bin/hubot" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376340579905" ignored="false" />
     <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409288684" ignored="false" />
-    <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409617266" ignored="false" />
+    <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376410336210" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <file leaf-file-name="jira-list-items.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list-items.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="23" selection-start="4309" selection-end="4309" vertical-scroll-proportion="0.8569157">
+            <state line="85" column="16" selection-start="3792" selection-end="3792" vertical-scroll-proportion="0.45151034">
               <folding />
             </state>
           </provider>
@@ -385,7 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list-items.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="23" selection-start="4309" selection-end="4309" vertical-scroll-proportion="0.8569157">
+        <state line="85" column="16" selection-start="3792" selection-end="3792" vertical-scroll-proportion="0.45151034">
           <folding />
         </state>
       </provider>
