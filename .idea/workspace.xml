@@ -82,7 +82,7 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="26" selection-start="3845" selection-end="3845" vertical-scroll-proportion="0.45151034">
+            <state line="89" column="26" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.52305245">
               <folding />
             </state>
           </provider>
@@ -389,7 +389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="26" selection-start="3845" selection-end="3845" vertical-scroll-proportion="0.45151034">
+        <state line="89" column="26" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.52305245">
           <folding />
         </state>
       </provider>
