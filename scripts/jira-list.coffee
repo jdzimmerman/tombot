@@ -37,7 +37,7 @@ regexp = new RegExp(regexpString, "i")
 module.exports = (robot) ->
 
   robot.respond regexp, (msg) ->
-    username = if msg.match[1] then msg.message.user.email.split('@')[0] else null
+    username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueType = if msg.match[5] and msg.match[5] != "issue" then msg.match[5] else null
     msg.send "Searching for issues..."
     getIssues msg, issueType, username, msg.match[3], msg.match[6], (response) ->
