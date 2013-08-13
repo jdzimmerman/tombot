@@ -69,7 +69,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   url = "https://" + domain + path
   queryString = type + ' and status!=closed' + user + prio + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
-
+  msg.send "Querying "+queryString
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
       msg.send "error getting issue list from JIRA"
