@@ -86,6 +86,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
 formatIssueLists = (issueArray, domain) ->
   msg.send "Testing messages"
   formattedIssueList = ""
+  msg.send "Testing messages"
   for issue in issueArray
     formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
 return formattedIssueList

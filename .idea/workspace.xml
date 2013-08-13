@@ -81,7 +81,7 @@
       <file leaf-file-name="jira-lookup.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-lookup.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="29" selection-start="3848" selection-end="3848" vertical-scroll-proportion="0.45151034">
+            <state line="88" column="2" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.49920508">
               <folding />
             </state>
           </provider>
@@ -387,7 +387,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-lookup.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="29" selection-start="3848" selection-end="3848" vertical-scroll-proportion="0.45151034">
+        <state line="88" column="2" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.49920508">
           <folding />
         </state>
       </provider>
