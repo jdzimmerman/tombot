@@ -81,6 +81,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
           msg.send "error getting issue details from JIRA"
         return
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
+        msg.send "trying to call formatIssueList"
         callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
 
 
