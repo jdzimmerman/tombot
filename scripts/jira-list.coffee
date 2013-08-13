@@ -57,7 +57,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
     msg.send "HUBOT_JIRA_PASSWORD environment variable must be set to a valid JIRA user's password."
   return
   unless domain
-    msg.send "HUBOT_JIRA_DOMAIN environment variables must be set to a valid <ORG>.jira.com domain."
+    msg.send "HUBOT_JIRA_DOMAIN environment variables must be set to."
   return
 
   jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
