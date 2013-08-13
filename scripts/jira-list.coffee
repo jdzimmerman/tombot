@@ -24,6 +24,8 @@
 issueTypes = process.env.HUBOT_JIRA_ISSUE_TYPES
 issueTypes or= "bug|task|sub task|support ticket|new feature|epic" #some defaults
 
+formattedIssueLists = ""
+
 # e.g. "blocker|high|medium|minor|trivial"
 issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
 issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
@@ -84,7 +86,6 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         callback(formatIssueLists(issueList, domain)) if issueList.length == json.issues.length
 
 formatIssueLists = (issueArray, domain) ->
-  formattedIssueLists = ""
   for issue in issueArray
     formattedIssueLists += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
 return formattedIssueLists
