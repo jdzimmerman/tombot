@@ -1,17 +1,24 @@
-# Get all bugs from JIRA assigned to user
+# Description:
+#   Get all bugs from JIRA assigned to user
 #
-# To configure, export the following shell variables
-# HUBOT_JIRA_DOMAIN
-# HUBOT_JIRA_USER
-# HUBOT_JIRA_PASSWORD
-# HUBOT_JIRA_ISSUE_TYPES
-# HUBOT_JIRA_ISSUE_PRIORITIES
+# Dependencies:
+#   None
 #
-# list my bugs - Retrieve the list of all a user's bugs from JIRA ('my' is optional)
-# list my bugs about <searchterm> - Retrieve list of all a user's bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
-# list my <priority> priority bugs  - Retrieve the list of a user's <priority> priority bugs from JIRA ('my' is optional)
-# list my <priority> priority bugs about <phrase> - Retrieve list of all a user's <priority> priority bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
+# Configuration:
+#   HUBOT_JIRA_DOMAIN
+#   HUBOT_JIRA_USER
+#   HUBOT_JIRA_PASSWORD
+#   HUBOT_JIRA_ISSUE_TYPES
+#   HUBOT_JIRA_ISSUE_PRIORITIES
 #
+# Commands:
+#   hubot list my bugs - Retrieve the list of all a user's bugs from JIRA ('my' is optional)
+#   hubot list my bugs about <searchterm> - Retrieve list of all a user's bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
+#   hubot list my <priority> priority bugs  - Retrieve the list of a user's <priority> priority bugs from JIRA ('my' is optional)
+#   hubot list my <priority> priority bugs about <phrase> - Retrieve list of all a user's <priority> priority bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
+#
+# Author:
+#   crcastle
 
 # e.g. "bug|task|sub task|support ticket|new feature|epic"
 issueTypes = process.env.HUBOT_JIRA_ISSUE_TYPES
@@ -33,13 +40,6 @@ module.exports = (robot) ->
     msg.send "Searching for issues..."
     getIssues msg, issueType, username, msg.match[3], msg.match[6], (response) ->
       msg.send response
-
-
-formatIssueList = (issueArray, domain) ->
-  formattedIssueList = ""
-  for issue in issueArray
-    formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
-return formattedIssueList
 
 getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   username = process.env.HUBOT_JIRA_USER
@@ -83,7 +83,11 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
         callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
 
-
+formatIssueList = (issueArray, domain) ->
+  formattedIssueList = ""
+  for issue in issueArray
+    formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
+return formattedIssueList
 
 getJSON = (msg, url, query, auth, callback) ->
   msg.http(url)
