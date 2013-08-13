@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-bugs.coffee" afterPath="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/jira-list-items.coffee" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jira-bugs.coffee" afterPath="" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-bugs.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
+      <file leaf-file-name="jira-list-items.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/jira-list-items.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="16" selection-start="3843" selection-end="3843" vertical-scroll-proportion="0.5970149">
+            <state line="104" column="23" selection-start="4348" selection-end="4348" vertical-scroll-proportion="0.972973">
               <folding />
             </state>
           </provider>
@@ -126,6 +127,7 @@
         <option value="$PROJECT_DIR$/rybot/Procfile" />
         <option value="$PROJECT_DIR$/scripts/jira-issues.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
+        <option value="$PROJECT_DIR$/scripts/jira-list-items.coffee" />
       </list>
     </option>
   </component>
@@ -381,9 +383,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/jira-list-items.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="16" selection-start="3843" selection-end="3843" vertical-scroll-proportion="0.5970149">
+        <state line="104" column="23" selection-start="4348" selection-end="4348" vertical-scroll-proportion="0.972973">
           <folding />
         </state>
       </provider>
