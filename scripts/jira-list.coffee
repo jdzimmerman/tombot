@@ -84,7 +84,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         callback(formatIssueLists(issueList, domain)) if issueList.length == json.issues.length
 
 formatIssueLists = (issueArray, domain) ->
-  msg.send "Testing messages"
+  console.log("Testing Message")
   formattedIssueList = ""
   for issue in issueArray
     formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
