@@ -49,13 +49,13 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   # do some error handling
   unless username
     msg.send "HUBOT_JIRA_USER environment variable must be set to a valid JIRA user's username."
-return
+  return
   unless password
     msg.send "HUBOT_JIRA_PASSWORD environment variable must be set to a valid JIRA user's password."
-return
+  return
   unless domain
     msg.send "HUBOT_JIRA_DOMAIN environment variables must be set to a valid <ORG>.jira.com domain."
-return
+  return
 
   jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
   type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
@@ -71,7 +71,7 @@ return
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
       msg.send "error getting issue list from JIRA"
-  return
+    return
     if json.total? and (json.total==0 or json.total=="0")
       msg.send "No issues like that, or you don't have access to see the issues."
     issueList = []
@@ -79,12 +79,11 @@ return
       getJSON msg, issue.self, null, auth, (err, details) ->
         if err
           msg.send "error getting issue details from JIRA"
-      return
+        return
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
-        msg.send "trying to call formatIssueList"
-        callback(formatIssueLists(issueList, domain)) if issueList.length == json.issues.length
+        callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
 
-formatIssueLists = (issueArray, domain) ->
+formatIssueList = (issueArray, domain) ->
   formattedIssueList = ""
   for issue in issueArray
     formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
@@ -95,7 +94,7 @@ getJSON = (msg, url, query, auth, callback) ->
     .header('Authorization', auth)
     .query(jql: query)
     .get() (err, res, body) ->
-  callback( err, JSON.parse(body) )
+    callback( err, JSON.parse(body) )
 
 toJiraTypeList = (arr) ->
   newArr = []
