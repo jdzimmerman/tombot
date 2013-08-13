@@ -83,6 +83,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
         callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
 
+
 formatIssueList = (issueArray, domain) ->
   formattedIssueList = ""
   for issue in issueArray

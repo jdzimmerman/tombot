@@ -79,7 +79,7 @@
       <file leaf-file-name="jira-bugs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="23" selection-start="4309" selection-end="4309" vertical-scroll-proportion="0.9502488">
+            <state line="85" column="8" selection-start="3775" selection-end="3775" vertical-scroll-proportion="0.5970149">
               <folding />
             </state>
           </provider>
@@ -383,7 +383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="23" selection-start="4309" selection-end="4309" vertical-scroll-proportion="0.9502488">
+        <state line="85" column="8" selection-start="3775" selection-end="3775" vertical-scroll-proportion="0.5970149">
           <folding />
         </state>
       </provider>
