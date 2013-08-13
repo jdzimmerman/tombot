@@ -85,10 +85,10 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
 
 formatIssueLists = (issueArray, domain) ->
   console.log("Testing Message")
-  formattedIssueList = ""
+  formattedIssueLists = ""
   for issue in issueArray
-    formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
-return formattedIssueList
+    formattedIssueLists += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
+return formattedIssueLists
 
 getJSON = (msg, url, query, auth, callback) ->
   msg.http(url)
