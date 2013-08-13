@@ -39,7 +39,7 @@ module.exports = (robot) ->
   robot.respond regexp, (msg) ->
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueType = if msg.match[5] and msg.match[5] != "issue" then msg.match[5] else null
-    msg.send "Searching for issues..."
+    msg.send "Searching for issues"
     getIssues msg, issueType, username, msg.match[3], msg.match[6], (response) ->
       msg.send response
 
@@ -69,6 +69,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   url = "https://" + domain + path
   queryString = type + ' and status!=closed' + user + prio + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
+
   msg.send "Querying "+queryString
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
