@@ -82,10 +82,10 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         return
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
         msg.send "trying to call formatIssueList"
-        callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
+        callback(formatIssueLists(issueList, domain)) if issueList.length == json.issues.length
 
 
-formatIssueList = (issueArray, domain) ->
+formatIssueLists = (issueArray, domain) ->
   formattedIssueList = ""
   for issue in issueArray
     formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
