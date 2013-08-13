@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="$PROJECT_DIR$/scripts/jira-issues.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-bugs.coffee" afterPath="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,6 +11,7 @@
     <file path="$PROJECT_DIR$/node_modules/hubot-hipchat/package.json" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376338697105" ignored="false" />
     <file path="$PROJECT_DIR$/node_modules/hubot-hipchat/node_modules/node-xmpp/node_modules/ltx/node_modules/sax/examples/big-not-pretty.xml" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376338697106" ignored="false" />
     <file path="$PROJECT_DIR$/bin/hubot" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376340579905" ignored="false" />
+    <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376407890127" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +67,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-issues.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jira-issues.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.42056075">
+            <state line="37" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-bugs.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jira-bugs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="23" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.0">
+            <state line="85" column="55" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.70149255">
               <folding />
             </state>
           </provider>
@@ -125,8 +124,8 @@
         <option value="$PROJECT_DIR$/bin/hubot" />
         <option value="$PROJECT_DIR$/rybot/bin/hubot" />
         <option value="$PROJECT_DIR$/rybot/Procfile" />
-        <option value="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-issues.coffee" />
+        <option value="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
       </list>
     </option>
   </component>
@@ -375,16 +374,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="23" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.0">
+        <state line="37" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/jira-bugs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.42056075">
+        <state line="85" column="55" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.70149255">
           <folding />
         </state>
       </provider>

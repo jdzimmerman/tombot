@@ -34,6 +34,13 @@ module.exports = (robot) ->
     getIssues msg, issueType, username, msg.match[3], msg.match[6], (response) ->
       msg.send response
 
+
+formatIssueList = (issueArray, domain) ->
+  formattedIssueList = ""
+  for issue in issueArray
+    formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
+return formattedIssueList
+
 getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   username = process.env.HUBOT_JIRA_USER
   password = process.env.HUBOT_JIRA_PASSWORD
@@ -76,11 +83,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
         issueList.push( {key: details.key, summary: details.fields.summary.value} )
         callback(formatIssueList(issueList, domain)) if issueList.length == json.issues.length
 
-formatIssueList = (issueArray, domain) ->
-  formattedIssueList = ""
-  for issue in issueArray
-    formattedIssueList += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
-return formattedIssueList
+
 
 getJSON = (msg, url, query, auth, callback) ->
   msg.http(url)
