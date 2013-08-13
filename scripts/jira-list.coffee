@@ -50,6 +50,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   domain = process.env.HUBOT_JIRA_DOMAIN
 
   # do some error handling
+  msg.send "Forming Query..."
   unless username
     msg.send "HUBOT_JIRA_USER environment variable must be set to a valid JIRA user's username."
   return
@@ -61,7 +62,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   return
 
   jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
-  msg.send "Forming Query..."
+
   type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   prio = if priority? then ' and priority=' + priority else ''
