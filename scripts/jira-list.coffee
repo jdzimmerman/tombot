@@ -44,7 +44,7 @@ module.exports = (robot) ->
       msg.send response
 
 getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
-  msg.send "Forming Query..."
+
   username = process.env.HUBOT_JIRA_USER
   password = process.env.HUBOT_JIRA_PASSWORD
   domain = process.env.HUBOT_JIRA_DOMAIN
@@ -61,6 +61,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   return
 
   jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
+  msg.send "Forming Query..."
   type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   prio = if priority? then ' and priority=' + priority else ''
