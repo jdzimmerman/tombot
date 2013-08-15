@@ -31,13 +31,10 @@ issueList = []
 issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
 issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
 
-# /list( my)?( (blocker|high|medium|minor|trivial)( priority)?)? (bug|task|sub task|support ticket|new feature|epic|issue)s( about (.*))?/i
-regexpString = "/((show|list)( me )?)?issues/i"
-regexp = new RegExp(regexpString, "i")
 
 module.exports = (robot) ->
 
-  robot.respond regexp, (msg) ->
+  robot.respond /((show|list)( me )?)?issues/i, (msg) ->
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueType = if msg.match[5] and msg.match[5] != "issue" then msg.match[5] else null
     msg.send "Searching for issues..."
