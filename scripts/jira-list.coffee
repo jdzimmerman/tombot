@@ -53,7 +53,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   msg.send "Forming Query..."
 
   msg.send "Creating Jira Type List..."
-  jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
+  jiraTypeList = toJiraTypeList(issueTypes.split('|'))
 
   msg.send "Jira Type List includes - "+jiraTypeList
 
