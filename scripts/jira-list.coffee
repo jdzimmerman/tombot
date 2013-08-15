@@ -52,8 +52,10 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   # do some error handling
   msg.send "Forming Query..."
 
-
+  msg.send "Creating Jira Type List..."
   jiraTypeList = toJiraTypeList(process.env.HUBOT_JIRA_ISSUE_TYPES.split('|'))
+
+  msg.send "Jira Type List includes - "+jiraTypeList
 
   type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
