@@ -71,14 +71,9 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   msg.send "Querying "+url+queryString
   msg.http(url)
     .header('Authorization', auth)
-    .query(jql: query)
+    .query(jql: queryString)
     .get() (err, res, body) ->
       msg.send "testing response "+JSON.parse(body)
-      if err
-        msg.send "error getting issue list from JIRA"
-      return
-      if json.total? and (json.total==0 or json.total=="0")
-        msg.send "No issues like that, or you don't have access to see the issues."
       issueList = []
       msg.send "Found Issues: "+json.issues
 
