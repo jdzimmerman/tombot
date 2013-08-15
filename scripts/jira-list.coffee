@@ -68,6 +68,19 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   queryString = type + ' and status!=closed' + user + prio + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
+  msg.send "Querying "+url+queryString
+  msg.http(url)
+    .header('Authorization', auth)
+    .query(jql: query)
+    .get() (err, res, body) ->
+      msg.send "testing response "+JSON.parse(body)
+      if err
+        msg.send "error getting issue list from JIRA"
+      return
+      if json.total? and (json.total==0 or json.total=="0")
+        msg.send "No issues like that, or you don't have access to see the issues."
+      issueList = []
+      msg.send "Found Issues: "+json.issues
 
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
