@@ -32,7 +32,7 @@ issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
 issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
 
 # /list( my)?( (blocker|high|medium|minor|trivial)( priority)?)? (bug|task|sub task|support ticket|new feature|epic|issue)s( about (.*))?/i
-regexpString = "list( my)?( (" + issuePriorities + ")( priority)?)? (" + issueTypes + "|issue)s( about (.*))?"
+regexpString = "/((show|list)( my )?)?issue( s )?/i"
 regexp = new RegExp(regexpString, "i")
 
 module.exports = (robot) ->
@@ -59,7 +59,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
 
   msg.send "Jira Type List includes - "+jiraTypeList
 
-  type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
+  type = 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   prio = if priority? then ' and priority=' + priority else ''
   search = if phrase? then ' and (summary~"' + phrase + '" or description~"' + phrase + '")' else ''
@@ -79,40 +79,3 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
       for issue in json.issues
         msg.send(issue.self)
 
-  getJSON msg, url, queryString, auth, (err, json) ->
-    if err
-      msg.send "error getting issue list from JIRA"
-    return
-    if json.total? and (json.total==0 or json.total=="0")
-      msg.send "No issues like that, or you don't have access to see the issues."
-    issueList = []
-    msg.send "Found Issues: "+json.issues
-    for issue in json.issues
-      getJSON msg, issue.self, null, auth, (err, details) ->
-        if err
-          msg.send "error getting issue details from JIRA"
-        return
-        issueList.push( {key: details.key, summary: details.fields.summary.value} )
-        callback(formatIssueLists(issueList, domain)) if issueList.length == json.issues.length
-
-formatIssueLists = (issueArray, domain) ->
-  for issue in issueArray
-    formattedIssueLists += issue.summary + " -> https://" + domain + "/browse/" + issue.key + "\n"
-return formattedIssueLists
-
-getJSON = (msg, url, query, auth, callback) ->
-  msg.send "Querying "+url+queryString
-  msg.http(url)
-    .header('Authorization', auth)
-    .query(jql: query)
-    .get() (err, res, body) ->
-      msg.send "testing response "+JSON.parse(body)
-  callback( err, JSON.parse(body) )
-
-
-
-toJiraTypeList = (arr) ->
-  newArr = []
-  for issueType in arr
-    newArr.push '"' + issueType + '"'
-return newArr.join(',')
