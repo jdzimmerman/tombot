@@ -32,7 +32,7 @@ issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
 issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
 
 # /list( my)?( (blocker|high|medium|minor|trivial)( priority)?)? (bug|task|sub task|support ticket|new feature|epic|issue)s( about (.*))?/i
-regexpString = "/((show|list)( my )?)?issue( s )?/i"
+regexpString = "/((show|list))?issues/i"
 regexp = new RegExp(regexpString, "i")
 
 module.exports = (robot) ->
