@@ -52,7 +52,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   # do some error handling
   msg.send "Forming Query..."
 
-  msg.send "Creating Jira Type List...."
+  msg.send "Creating Jira Type Lists...."
 
   jiraTypeList = 'bug,story'
 
