@@ -56,7 +56,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
 
   jiraTypeList = 'bug,story'
 
-  msg.send "Jira Type List includes "
+  msg.send "Jira Type List includes - "+jiraTypeList
 
   type = if issueType? then 'issueType="' + issueType + '"' else 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
