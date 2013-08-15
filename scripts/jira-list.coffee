@@ -63,12 +63,12 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   prio = if priority? then ' and priority=' + priority else ''
   search = if phrase? then ' and (summary~"' + phrase + '" or description~"' + phrase + '")' else ''
 
-  path = '/rest/api/latest/search?jql='
+  path = '/rest/api/latest/search'
   url = "https://" + domain + path
   queryString = type + ' and status!=closed' + user + prio + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
-  msg.send "Querying "+url+queryString
+
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
       msg.send "error getting issue list from JIRA"
@@ -91,11 +91,14 @@ formatIssueLists = (issueArray, domain) ->
 return formattedIssueLists
 
 getJSON = (msg, url, query, auth, callback) ->
+  msg.send "Querying "+url+queryString
   msg.http(url)
     .header('Authorization', auth)
     .query(jql: query)
     .get() (err, res, body) ->
+      msg.send "testing response "+JSON.parse(body)
   callback( err, JSON.parse(body) )
+
 
 
 toJiraTypeList = (arr) ->
