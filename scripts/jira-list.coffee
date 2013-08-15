@@ -25,6 +25,7 @@ issueTypes = process.env.HUBOT_JIRA_ISSUE_TYPES
 issueTypes or= "bug|task|sub task|support ticket|new feature|epic" #some defaults
 
 formattedIssueLists = ""
+issueList = []
 
 # e.g. "blocker|high|medium|minor|trivial"
 issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
@@ -73,9 +74,10 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
     .header('Authorization', auth)
     .query(jql: queryString)
     .get() (err, res, body) ->
-      msg.send "testing response "+JSON.parse(body)
-      issueList = []
-      msg.send "Found Issues: "+json.issues
+      json = JSON.parse(body)
+      msg.send(json.total" Issues Found")
+      for issue in json.issues
+        msg.send(issue.self)
 
   getJSON msg, url, queryString, auth, (err, json) ->
     if err
