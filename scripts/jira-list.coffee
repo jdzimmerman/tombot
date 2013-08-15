@@ -52,12 +52,9 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   # do some error handling
   msg.send "Forming Query..."
 
-  msg.send "Creating Jira Type List..."
-  arr = issueTypes.split('|')
-  newArr = []
-  for issueType in arr
-    newArr.push '"' + issueType + '"'
-  jiraTypeList = newArr.join(',')
+  msg.send "Creating Jira Type List...."
+
+  jiraTypeList = 'bug,story'
 
   msg.send "Jira Type List includes - "+jiraTypeList
 
