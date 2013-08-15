@@ -63,7 +63,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
   prio = if priority? then ' and priority=' + priority else ''
   search = if phrase? then ' and (summary~"' + phrase + '" or description~"' + phrase + '")' else ''
 
-  path = '/rest/api/latest/search'
+  path = '/rest/api/latest/search?jql='
   url = "https://" + domain + path
   queryString = type + ' and status!=closed' + user + prio + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')

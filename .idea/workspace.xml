@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +14,7 @@
     <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409288684" ignored="false" />
     <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376410336210" ignored="false" />
     <file path="/jira-lookup.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376412212049" ignored="false" />
-    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376595280435" ignored="false" />
+    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376595816998" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,25 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="101" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.15422885">
+            <state line="78" column="83" selection-start="3256" selection-end="3256" vertical-scroll-proportion="0.41379312">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dilbert.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/dilbert.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wikipedia.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/wikipedia.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -380,6 +398,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/wikipedia.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
@@ -387,9 +412,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/dilbert.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="101" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.15422885">
+        <state line="78" column="83" selection-start="3256" selection-end="3256" vertical-scroll-proportion="0.41379312">
           <folding />
         </state>
       </provider>
