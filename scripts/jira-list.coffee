@@ -91,5 +91,5 @@ getIssues = (msg, issueState, project, callback) ->
       json = JSON.parse(body)
       if json.total? then msg.send(json.total+" Issues Found")
       if json.issues? then for issue in json.issues
-        msg.send(issue.key+"("+issue.type.name+") - "+issue.self)
+        msg.send(issue.key+"("+issue.issuetype.name+") - "+issue.self)
 
