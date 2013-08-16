@@ -30,12 +30,25 @@ issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defa
 
 
 module.exports = (robot) ->
+  #**********************
+  #Listing of all projects
+  #**********************
   robot.hear /((show|list))? projects/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("com - Compiance")
 
+  #**********************
+  #Listing of all Jira Commands
+  #**********************
+  robot.hear /((show|list))? jira ((commands|help))/i, (msg) ->
+    msg.send("opreq - Ops Requests")
+    msg.send("com - Compiance")
+
+  robot.hear /jira ((commands|help))?/i, (msg) ->
+    msg.send("opreq - Ops Requests")
+    msg.send("com - Compiance")
+
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
-    msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
     else if msg.match[5] then msg.match[5]
@@ -46,7 +59,7 @@ module.exports = (robot) ->
     if issueState.toLowerCase() == "test" then issueState = "qa"
     if issueState.toLowerCase() == "ready to deploy" then issueState = "merged"
     issueState = "("+issueState+")"
-    msg.send "Searching for issues in project "+project
+    #msg.send "Searching for issues in project "+project
     getIssues msg, issueState, username, project, (response) ->
       msg.send response
 
@@ -56,11 +69,11 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   password = process.env.HUBOT_JIRA_PASSWORD
   domain = process.env.HUBOT_JIRA_DOMAIN
 
-  msg.send "Forming Query..."
+  #msg.send "Forming Query..."
 
-  msg.send "Creating Jira Type Lists...."
+  #msg.send "Creating Jira Type Lists...."
 
-  msg.send "Jira Type List includes - "+jiraTypeList
+  #msg.send "Jira Type List includes - "+jiraTypeList
 
   type = 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
@@ -71,11 +84,11 @@ getIssues = (msg, issueState, assignee, project, callback) ->
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  currentSprint = if projectString.toLowerCase() != 'opreq' and projectString.toLowerCase() !='op' and projectString.toLowerCase() != 'ad' and projectString.toLowerCase() != 'all' then ' and sprint in openSprints()' else ' '
+  currentSprint = if project.toLowerCase() != 'opreq' and project.toLowerCase() !='op' and project.toLowerCase() != 'ad' and project.toLowerCase() != 'all' then ' and sprint in openSprints()' else ' '
   queryString = type + status + projectString + currentSprint + " order by rank"
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
-  msg.send "Querying "+url+queryString
+  #msg.send "Querying "+url+queryString
   msg.http(url)
     .header('Authorization', auth)
     .query(jql: queryString)
