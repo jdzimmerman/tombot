@@ -40,14 +40,13 @@ module.exports = (robot) ->
   #**********************
   #Listing of all Jira Commands
   #**********************
-  robot.hear /((show|list)?)? jira ((commands|help))/i, (msg) ->
+  robot.hear /jira ((commands|help))/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("com - Compiance")
 
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
-    username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
     else if msg.match[5] then msg.match[5]
     project = if msg.match[3] then msg.match[3] else "ops-req"
