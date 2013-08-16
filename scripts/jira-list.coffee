@@ -40,13 +40,11 @@ module.exports = (robot) ->
   #**********************
   #Listing of all Jira Commands
   #**********************
-  robot.hear /((show|list))? jira ((commands|help))/i, (msg) ->
+  robot.hear /((show|list)?)? jira ((commands|help))/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("com - Compiance")
 
-  robot.hear /jira ((commands|help))?/i, (msg) ->
-    msg.send("opreq - Ops Requests")
-    msg.send("com - Compiance")
+
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
@@ -57,7 +55,7 @@ module.exports = (robot) ->
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
     if issueState.toLowerCase() == "test" then issueState = "qa"
-    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged"
+    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged,in deployment"
     issueState = "("+issueState+")"
     #msg.send "Searching for issues in project "+project
     getIssues msg, issueState, username, project, (response) ->
@@ -77,7 +75,6 @@ getIssues = (msg, issueState, assignee, project, callback) ->
 
   type = 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
-  if issueState? then msg.send "Jira Issue State = "+issueState else msg.send "No Issue State"
   status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
   projectString = if project? and project.toLowerCase() != 'all' then ' and project = '+project
   else if project? and project.toLowerCase() == 'all' then 'and project in (ad,com,op,opreq,mkt,uxui,meme,core,bo)' else ''
