@@ -68,11 +68,12 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   if issueState? then msg.send "Jira Issue State = "+issueState else msg.send "No Issue State"
   status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
-  projectString = if project? then ' and project = '+project else ''
+  projectString = if project? and project.toLowerCase() != 'all' then ' and project = '+project
+  else if project? and project.toLowerCase() == 'all' then 'and project in (ad,com,op,opreq,mkt,uxui,meme,core,bo' else ''
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  currentSprint = if projectString == 'opreq' or projectString =='op' or projectString == 'ad' then ' ' else 'sprint in openSprints()'
+  currentSprint = if projectString.toLowerCase() == 'opreq' or projectString.toLowerCase() =='op' or projectString.toLowerCase() == 'ad' or projectString.toLowerCase() == 'all' then ' ' else ' sprint in openSprints()'
   queryString = type + status + projectString + currentSprint + " order by rank"
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
