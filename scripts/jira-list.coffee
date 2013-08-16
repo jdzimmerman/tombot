@@ -54,7 +54,7 @@ module.exports = (robot) ->
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
     if issueState.toLowerCase() == "test" then issueState = "qa"
-    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged,in deployment"
+    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged,'in deployment'"
     issueState = "("+issueState+")"
     #msg.send "Searching for issues in project "+project
     getIssues msg, issueState, project, (response) ->
