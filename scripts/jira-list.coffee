@@ -35,7 +35,7 @@ issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
 module.exports = (robot) ->
 
   robot.hear /((show|list)( me )?)?issues (.*)/i, (msg) ->
-    msg.send "First word after match "+msg.match[1]
+    msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueType = if msg.match[5] and msg.match[5] != "issue" then msg.match[5] else null
     msg.send "Searching for issues..."
@@ -73,7 +73,9 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
     .query(jql: queryString)
     .get() (err, res, body) ->
       json = JSON.parse(body)
-      if json.total? then msg.send(json.total+" Issues Found")
-      for issue in json.issues
-        msg.send(issue.self)
+      if json.total?
+      then
+        msg.send(json.total+" Issues Found")
+        for issue in json.issues
+          msg.send(issue.self)
 
