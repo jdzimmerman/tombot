@@ -67,7 +67,7 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   if issueState? then msg.send "Jira Issue State = "+issueState else msg.send "No Issue State"
   status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
   projectString = if project? and project.toLowerCase() != 'all' then ' and project = '+project
-  else if project? and project.toLowerCase() == 'all' then 'and project in (ad,com,op,opreq,mkt,uxui,meme,core,bo' else ''
+  else if project? and project.toLowerCase() == 'all' then 'and project in (ad,com,op,opreq,mkt,uxui,meme,core,bo)' else ''
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
