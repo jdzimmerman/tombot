@@ -38,7 +38,7 @@ module.exports = (robot) ->
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[3]
     else if msg.match[5] then msg.match[5]
-    project = if msg.match[1] then msg.match[1] else "ops-req"
+    project = if msg.match[2] then msg.match[2] else "ops-req"
 
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
