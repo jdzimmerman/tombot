@@ -56,7 +56,6 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   password = process.env.HUBOT_JIRA_PASSWORD
   domain = process.env.HUBOT_JIRA_DOMAIN
 
-  # do some error handling
   msg.send "Forming Query..."
 
   msg.send "Creating Jira Type Lists...."
@@ -74,7 +73,7 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
   currentSprint = if projectString == 'opreq' or projectString =='op' or projectString == 'ad' then ' ' else 'sprint in openSprints()'
-  queryString = type + status + projectString + "order by rank"
+  queryString = type + status + projectString + currentSprint + " order by rank"
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
   msg.send "Querying "+url+queryString
