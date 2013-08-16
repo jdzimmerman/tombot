@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
-    </list>
+    <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="" />
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376321912155" ignored="false" />
@@ -82,7 +80,7 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="26" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.80172414">
+            <state line="37" column="53" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.28448275">
               <folding />
             </state>
           </provider>
@@ -419,7 +417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="26" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.80172414">
+        <state line="37" column="53" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.28448275">
           <folding />
         </state>
       </provider>
