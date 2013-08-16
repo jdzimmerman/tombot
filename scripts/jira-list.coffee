@@ -57,10 +57,10 @@ module.exports = (robot) ->
     if issueState.toLowerCase() == "ready to deploy" then issueState = "merged,in deployment"
     issueState = "("+issueState+")"
     #msg.send "Searching for issues in project "+project
-    getIssues msg, issueState, username, project, (response) ->
+    getIssues msg, issueState, project, (response) ->
       msg.send response
 
-getIssues = (msg, issueState, assignee, project, callback) ->
+getIssues = (msg, issueState, project, callback) ->
 
   username = process.env.HUBOT_JIRA_USER
   password = process.env.HUBOT_JIRA_PASSWORD
