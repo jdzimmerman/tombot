@@ -73,7 +73,7 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
     .query(jql: queryString)
     .get() (err, res, body) ->
       json = JSON.parse(body)
-      if json.total?
-      then msg.send(json.total+" Issues Found") for issue in json.issues
+      if json.total? then msg.send(json.total+" Issues Found")
+      if json.issues? then for issue in json.issues
         msg.send(issue.self)
 
