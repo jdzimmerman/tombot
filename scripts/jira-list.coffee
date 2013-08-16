@@ -36,7 +36,8 @@ module.exports = (robot) ->
   robot.hear /((show|list))?issues( in)? (.*)?/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
-    issueState = if msg.match[3] and msg.match[3] != "in" then msg.match[3] else msg.match[4]
+    issueState = if msg.match[3] and msg.match[3] != "in" and msg.match[3] !="" in" then msg.match[3]
+    else if msg.match[4] then msg.match[4]
     msg.send "Searching for issues..."
     getIssues msg, issueState, username, (response) ->
       msg.send response
