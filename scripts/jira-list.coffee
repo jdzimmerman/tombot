@@ -33,16 +33,17 @@ issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defa
 
 module.exports = (robot) ->
 
-  robot.hear /((show|list))?issues( in)? (.*)?/i, (msg) ->
+  robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
-    issueState = if msg.match[3] and msg.match[3] != "in" and msg.match[3] !=" in" then msg.match[3]
-    else if msg.match[4] then msg.match[4]
+    issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[3]
+    else if msg.match[5] then msg.match[5]
+    project = if msg.match[1] then msg.match[1] else "ops-req"
 
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
     issueState = "("+issueState+")"
-    msg.send "Searching for issues..."
+    msg.send "Searching for issues in project "+project
     getIssues msg, issueState, username, (response) ->
       msg.send response
 
@@ -65,10 +66,11 @@ getIssues = (msg, issueState, assignee, callback) ->
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   if issueState? then msg.send "Jira Issue State = "+issueState else msg.send "No Issue State"
   status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
+  projectString = if project? then ' and project = '+project else ''
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  queryString = type + user + status
+  queryString = type + user + status + projectString
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
   msg.send "Querying "+url+queryString
