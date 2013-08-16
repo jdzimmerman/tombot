@@ -74,8 +74,6 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
     .get() (err, res, body) ->
       json = JSON.parse(body)
       if json.total?
-      then
-        msg.send(json.total+" Issues Found")
-        for issue in json.issues
+      then msg.send(json.total+" Issues Found") for issue in json.issues
           msg.send(issue.self)
 
