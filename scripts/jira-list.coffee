@@ -35,14 +35,24 @@ module.exports = (robot) ->
   #**********************
   robot.hear /((show|list))? projects/i, (msg) ->
     msg.send("opreq - Ops Requests")
+    msg.send("op - Ops-New")
     msg.send("com - Compiance")
+    msg.send("bo - Back Office")
+    msg.send("ad - Admin")
+    msg.send("mkt - Marketing")
+    msg.send("uxui - UX/UI Team")
+    msg.send("meme - Meme Team")
+    msg.send("core - Core Transactional")
+    msg.send("ap - App Team")
 
   #**********************
   #Listing of all Jira Commands
   #**********************
   robot.hear /jira ((commands|help))/i, (msg) ->
-    msg.send("opreq - Ops Requests")
-    msg.send("com - Compiance")
+    msg.send("show|list projects - list all available jira projects")
+    msg.send("show/list <projectCode|all> issues (in) <status> - list all issues from the selected project with the selected status")
+    msg.send("<jiraTicketNumber> start - moves the jira ticket to 'in progress'")
+
 
 
 
