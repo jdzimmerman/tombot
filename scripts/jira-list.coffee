@@ -1,5 +1,5 @@
 # Description:
-#   Get all bugs from JIRA assigned to user
+#   Get all issues for a project in jira in a certain status
 #
 # Dependencies:
 #   None
@@ -9,16 +9,14 @@
 #   HUBOT_JIRA_USER
 #   HUBOT_JIRA_PASSWORD
 #   HUBOT_JIRA_ISSUE_TYPES
-#   HUBOT_JIRA_ISSUE_PRIORITIES
+#   HUBOT_JIRA_ISSUE_STATES
 #
 # Commands:
-#   hubot list my bugs - Retrieve the list of all a user's bugs from JIRA ('my' is optional)
-#   hubot list my bugs about <searchterm> - Retrieve list of all a user's bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
-#   hubot list my <priority> priority bugs  - Retrieve the list of a user's <priority> priority bugs from JIRA ('my' is optional)
-#   hubot list my <priority> priority bugs about <phrase> - Retrieve list of all a user's <priority> priority bugs from JIRA where the summary or description field contains <phrase> ('my' is optional)
+#   hubot list/show <projectName> issues (in) <status> - Retrieve the list of all the issues in the selected project and selected status
+#   hubot list/show projects - Retrieve list of all the projects available for the above query
 #
 # Author:
-#   crcastle
+#   rysulliv
 
 # e.g. "bug|task|sub task|support ticket|new feature|epic"
 issueTypes = process.env.HUBOT_JIRA_ISSUE_TYPES
@@ -27,13 +25,14 @@ issueTypes or= "bug|task|sub task|support ticket|new feature|epic" #some default
 formattedIssueLists = ""
 issueList = []
 
-issueState = process.env.HUBOT_JIRA_ISSUE_STATE
+issueState = process.env.HUBOT_JIRA_ISSUE_STATES
 issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defaults
 
 
 module.exports = (robot) ->
   robot.hear /((show|list))? projects/i, (msg) ->
-    msg.send("ops-requests - Ops Requests")
+    msg.send("opreq - Ops Requests")
+    msg.send("com - Compiance")
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
@@ -74,7 +73,8 @@ getIssues = (msg, issueState, assignee, project, callback) ->
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  queryString = type + status + projectString
+  currentSprint = if projectString == 'opreq' or projectString =='op' or projectString == 'ad' then ' ' else 'sprint in openSprints()'
+  queryString = type + status + projectString + "order by rank"
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
   msg.send "Querying "+url+queryString
