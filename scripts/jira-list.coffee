@@ -52,6 +52,15 @@ module.exports = (robot) ->
     msg.send("show|list projects - list all available jira projects")
     msg.send("show/list <projectCode|all> issues (in) <status> - list all issues from the selected project with the selected status")
     msg.send("<jiraTicketNumber> start - moves the jira ticket to 'in progress'")
+    msg.send("<jiraTicketNumber> schedule - moves the jira ticket to 'scheduled'")
+    msg.send("<jiraTicketNumber> resolve - moves the jira ticket to 'resovled'")
+    msg.send("<jiraTicketNumber> close - moves the jira ticket to 'closed'")
+    msg.send("<jiraTicketNumber> in test - moves the jira ticket to 'qa'")
+    msg.send("<jiraTicketNumber> qa - moves the jira ticket to 'qa'")
+    msg.send("<jiraTicketNumber> code review - moves the jira ticket to 'code review'")
+    msg.send("<jiraTicketNumber> merge - moves the jira ticket to 'merged'")
+    msg.send("<jiraTicketNumber> move to production - moves the jira ticket to 'merged'")
+    msg.send("<jiraTicketNumber> ready to deploy - moves the jira ticket to 'merged'")
 
 
 
