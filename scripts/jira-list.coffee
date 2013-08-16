@@ -73,7 +73,6 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   #msg.send "Jira Type List includes - "+jiraTypeList
 
   type = 'issueType in (' + jiraTypeList + ')'
-  user = if assignee? then ' and assignee="' + assignee + '"' else ''
   status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
   projectString = if project? and project.toLowerCase() != 'all' then ' and project = '+project
   else if project? and project.toLowerCase() == 'all' then 'and project in (ad,com,op,opreq,mkt,uxui,meme,core,bo)' else ''
