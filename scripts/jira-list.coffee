@@ -28,7 +28,7 @@ formattedIssueLists = ""
 issueList = []
 
 issueState = process.env.HUBOT_JIRA_ISSUE_STATE
-issueState or= "open|in progress|qa|merged|closed" #some defaults
+issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defaults
 
 
 module.exports = (robot) ->
@@ -38,6 +38,10 @@ module.exports = (robot) ->
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
     issueState = if msg.match[3] and msg.match[3] != "in" and msg.match[3] !=" in" then msg.match[3]
     else if msg.match[4] then msg.match[4]
+
+    if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
+    if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
+    issueState = "("+issueState+")"
     msg.send "Searching for issues..."
     getIssues msg, issueState, username, (response) ->
       msg.send response
@@ -60,7 +64,7 @@ getIssues = (msg, issueState, assignee, callback) ->
   type = 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
   if issueState? then msg.send "Jira Issue State = "+issueState else msg.send "No Issue State"
-  status = if issueState? then ' and status=' + issueState else 'and status!=closed'
+  status = if issueState? then ' and status in ' + issueState else 'and status!=closed'
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
