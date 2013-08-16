@@ -28,7 +28,7 @@ formattedIssueLists = ""
 issueList = []
 
 issueState = process.env.HUBOT_JIRA_ISSUE_STATE
-issuePriorities or= "open|in progress|qa|merged|closed" #some defaults
+issueState or= "open|in progress|qa|merged|closed" #some defaults
 
 
 module.exports = (robot) ->
