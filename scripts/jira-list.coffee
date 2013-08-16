@@ -27,9 +27,8 @@ issueTypes or= "bug|task|sub task|support ticket|new feature|epic" #some default
 formattedIssueLists = ""
 issueList = []
 
-# e.g. "blocker|high|medium|minor|trivial"
-issuePriorities = process.env.HUBOT_JIRA_ISSUE_PRIORITIES
-issuePriorities or= "blocker|high|medium|minor|trivial" #some defaults
+issueState = process.env.HUBOT_JIRA_ISSUE_STATE
+issuePriorities or= "open|in progress|qa|merged|closed" #some defaults
 
 
 module.exports = (robot) ->
@@ -37,12 +36,12 @@ module.exports = (robot) ->
   robot.hear /((show|list))?issues (.*)/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
-    issueType = if msg.match[5] and msg.match[5] != "issue" then msg.match[5] else null
+    issueState = if msg.match[3] and msg.match[3] != "issues" then msg.match[5] else null
     msg.send "Searching for issues..."
-    getIssues msg, issueType, username, msg.match[3], msg.match[6], (response) ->
+    getIssues msg, issueState, username, (response) ->
       msg.send response
 
-getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
+getIssues = (msg, issueState, assignee, callback) ->
 
   username = process.env.HUBOT_JIRA_USER
   password = process.env.HUBOT_JIRA_PASSWORD
@@ -59,12 +58,11 @@ getIssues = (msg, issueType, assignee, priority, phrase, callback) ->
 
   type = 'issueType in (' + jiraTypeList + ')'
   user = if assignee? then ' and assignee="' + assignee + '"' else ''
-  prio = if priority? then ' and priority=' + priority else ''
-  search = if phrase? then ' and (summary~"' + phrase + '" or description~"' + phrase + '")' else ''
+  status = if issueState? then ' and status=' + issueState else ''
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  queryString = type + ' and status!=closed' + user + prio + search
+  queryString = type + user + status + search
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
   msg.send "Querying "+url+queryString
