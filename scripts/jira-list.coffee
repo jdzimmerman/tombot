@@ -42,6 +42,8 @@ module.exports = (robot) ->
 
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
+    if issueState.toLowerCase() == "test" then issueState = "qa"
+    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged"
     issueState = "("+issueState+")"
     msg.send "Searching for issues in project "+project
     getIssues msg, issueState, username, project, (response) ->
@@ -81,5 +83,5 @@ getIssues = (msg, issueState, assignee, project, callback) ->
       json = JSON.parse(body)
       if json.total? then msg.send(json.total+" Issues Found")
       if json.issues? then for issue in json.issues
-        msg.send(issue.self)
+        msg.send(json.key+" - "+issue.self)
 
