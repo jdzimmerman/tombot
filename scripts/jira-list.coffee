@@ -44,10 +44,10 @@ module.exports = (robot) ->
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
     issueState = "("+issueState+")"
     msg.send "Searching for issues in project "+project
-    getIssues msg, issueState, username, (response) ->
+    getIssues msg, issueState, username, project, (response) ->
       msg.send response
 
-getIssues = (msg, issueState, assignee, callback) ->
+getIssues = (msg, issueState, assignee, project, callback) ->
 
   username = process.env.HUBOT_JIRA_USER
   password = process.env.HUBOT_JIRA_PASSWORD
