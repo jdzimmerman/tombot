@@ -32,6 +32,8 @@ issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defa
 
 
 module.exports = (robot) ->
+  robot.hear /((show|list))? projects/i, (msg) ->
+    msg.send("ops-requests - Ops Requests")
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
