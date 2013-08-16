@@ -19,8 +19,8 @@
 #   rysulliv
 
 # e.g. "bug|task|sub task|support ticket|new feature|epic"
-issueTypes = process.env.HUBOT_JIRA_ISSUE_TYPES
-issueTypes or= "bug|task|sub task|support ticket|new feature|epic" #some defaults
+jiraTypeList = process.env.HUBOT_JIRA_ISSUE_TYPES
+jiraTypeList or= "bug,task,story" #some defaults
 
 formattedIssueLists = ""
 issueList = []
@@ -59,8 +59,6 @@ getIssues = (msg, issueState, assignee, project, callback) ->
   msg.send "Forming Query..."
 
   msg.send "Creating Jira Type Lists...."
-
-  jiraTypeList = 'bug,story'
 
   msg.send "Jira Type List includes - "+jiraTypeList
 
