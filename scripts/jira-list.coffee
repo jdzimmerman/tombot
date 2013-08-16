@@ -36,9 +36,9 @@ module.exports = (robot) ->
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     msg.send "First word after match "+msg.match[3]
     username = "adam.menges@sendgrid.com" #if msg.match[1] then msg.message.user.email.split('@')[0] else null
-    issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[3]
+    issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
     else if msg.match[5] then msg.match[5]
-    project = if msg.match[2] then msg.match[2] else "ops-req"
+    project = if msg.match[3] then msg.match[3] else "ops-req"
 
     if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
     if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
