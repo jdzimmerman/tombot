@@ -63,7 +63,7 @@ getIssues = (msg, issueState, assignee, callback) ->
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  queryString = type + user + status + search
+  queryString = type + user + status
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
   msg.send "Querying "+url+queryString

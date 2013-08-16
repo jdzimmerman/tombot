@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendgrid.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sendgrid.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="30" column="65" selection-start="865" selection-end="865" vertical-scroll-proportion="0.726979">
               <folding />
             </state>
           </provider>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jira-list.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="78" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.5086207">
+            <state line="65" column="36" selection-start="2431" selection-end="2431" vertical-scroll-proportion="-11.346154">
               <folding />
             </state>
           </provider>
@@ -382,13 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/wikipedia.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -399,6 +392,13 @@
     <entry file="file://$PROJECT_DIR$/scripts/commitmessage.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="36" selection-start="2431" selection-end="2431" vertical-scroll-proportion="-11.346154">
           <folding />
         </state>
       </provider>
@@ -417,9 +417,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/sendgrid.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="78" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.5086207">
+        <state line="30" column="65" selection-start="865" selection-end="865" vertical-scroll-proportion="0.726979">
           <folding />
         </state>
       </provider>
