@@ -71,7 +71,7 @@ getIssues = (msg, issueState, assignee, project, callback) ->
 
   path = '/rest/api/latest/search'
   url = "https://" + domain + path
-  currentSprint = if projectString.toLowerCase() == 'opreq' or projectString.toLowerCase() =='op' or projectString.toLowerCase() == 'ad' or projectString.toLowerCase() == 'all' then ' ' else ' and sprint in openSprints()'
+  currentSprint = if projectString.toLowerCase() != 'opreq' and projectString.toLowerCase() !='op' and projectString.toLowerCase() != 'ad' and projectString.toLowerCase() != 'all' then ' and sprint in openSprints()' else ' '
   queryString = type + status + projectString + currentSprint + " order by rank"
   auth = "Basic " + new Buffer(username + ':' + password).toString('base64')
 
