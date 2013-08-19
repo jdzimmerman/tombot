@@ -71,12 +71,13 @@ module.exports = (robot) ->
 
   QS = require 'querystring'
   robot.respond /move (.*)?/i, (msg) ->
-    msg.send("Matched Word is: "+msg.match[1])
+
     issue=msg.match[1]
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.send(url)
-    data= data = '{"transition":"5"}'
+    data= data = '{"transition"{"id":"5"}}'
+    msg.send("Posting: '"+data:"'")
     msg.http(url)
       .header('Content-Length', data.length)
       .header('Content-Type', "application/json")
