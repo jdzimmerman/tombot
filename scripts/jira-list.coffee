@@ -90,7 +90,7 @@ module.exports = (robot) ->
           issue = i.toUpperCase()
           path = '/rest/api/2/issue/'+issue+"/transitions"
           url = "https://" + domain + path
-          msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
+          msg.http(url)
               .auth(auth)
               .post({"transition":"5"}) (err, res, body) ->
                 try
