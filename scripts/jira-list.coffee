@@ -82,7 +82,7 @@ module.exports = (robot) ->
       .header('Content-Type', "application/json")
       .auth(auth)
       .post(JSON.stringify(data)) (err, res, body) ->
-        if(res.statusCode=="204")
+        if(res.statusCode==204)
           msg.send("Successfully moved "+issue)
         else
           msg.send("Error trying to move "+issue)
