@@ -70,9 +70,11 @@ module.exports = (robot) ->
 
 
   QS = require 'querystring'
-  robot.respond /move (.*)?/i, (msg) ->
+  robot.respond /move (.*)? (.*)?/i, (msg) ->
 
     issue=msg.match[1]
+    action=msg.match[2]
+    msg.send("Action: "+action)
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.send(url)
@@ -84,6 +86,8 @@ module.exports = (robot) ->
       .post(JSON.stringify(data)) (err, res, body) ->
         if(res.statusCode==204)
           msg.send("Successfully moved "+issue)
+        else if(res.statusCode==400)
+          msg.send("That Transition Is Not Available for "+issue)
         else
           msg.send("Error trying to move "+issue)
 
