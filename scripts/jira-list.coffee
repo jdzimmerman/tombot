@@ -82,11 +82,10 @@ module.exports = (robot) ->
       .header('Content-Type', "application/json")
       .auth(auth)
       .post(JSON.stringify(data)) (err, res, body) ->
-        msg.send(res.statusCode)
-        console.log(err)
-        console.log(res)
-        console.log(body)
-        msg.send body
+        if(res.statusCode=="204")
+          msg.send("Successfully moved "+issue)
+        else
+          msg.send("Error trying to move "+issue)
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
