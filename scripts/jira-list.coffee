@@ -69,16 +69,17 @@ module.exports = (robot) ->
     msg.send("<jiraTicketNumber> ready to deploy - moves the jira ticket to 'merged'")
 
 
-
+  QS = require 'querystring'
   robot.respond /move (.*)?/i, (msg) ->
     msg.send("Matched Word is: "+msg.match[1])
     issue=msg.match[1]
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.send(url)
+    data= data = QS.stringify({"transition":"5"})
     msg.http(url)
       .auth(auth)
-      .post({"transition":"5"}) (err, res, body) ->
+      .post(data) (err, res, body) ->
         msg.send("Post returned: "+JSON.parse(body))
         json = JSON.parse(body)
         msg.send(json)
