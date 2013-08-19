@@ -76,7 +76,7 @@ module.exports = (robot) ->
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.send(url)
-    data= data = '{"transition"{"id":"5"}}'
+    data='{"transition"{"id":"5"}}'
     msg.send("Posting: '"+data:"'")
     msg.http(url)
       .header('Content-Length', data.length)
