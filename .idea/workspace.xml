@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="$PROJECT_DIR$/scripts/jira-issues.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
     </list>
     <ignored path="tombot.iws" />
@@ -70,19 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-issues.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jira-issues.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="2" selection-start="429" selection-end="451" vertical-scroll-proportion="-5.923077">
+            <state line="78" column="16" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.8735244">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jira-list.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="22" selection-start="3016" selection-end="3016" vertical-scroll-proportion="0.14655173">
+            <state line="69" column="0" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-2.1153846">
               <folding />
             </state>
           </provider>
@@ -148,8 +149,8 @@
         <option value="$PROJECT_DIR$/scripts/jira-bugs.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-list-items.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-lookup.coffee" />
-        <option value="$PROJECT_DIR$/scripts/jira-issues.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-list.coffee" />
+        <option value="$PROJECT_DIR$/scripts/jira-issues.coffee" />
       </list>
     </option>
   </component>
@@ -426,16 +427,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="2" selection-start="429" selection-end="451" vertical-scroll-proportion="-5.923077">
+        <state line="69" column="0" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-2.1153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="22" selection-start="3016" selection-end="3016" vertical-scroll-proportion="0.14655173">
+        <state line="78" column="16" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.8735244">
           <folding />
         </state>
       </provider>
