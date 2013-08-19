@@ -63,8 +63,7 @@ module.exports = (robot) ->
                   catch reallyError
                     msg.send "[*ERROR*] " + reallyError
 
-      jiraPattern = "move /\\b(" + reducedPrefixes + "-)(\\d+)\\b/g"
-      robot.respond eval(jiraPattern), (msg) ->
+      robot.respond /move (.*)?/i, (msg) ->
         msg.send("Matched Word is: "+msg.match[2])
 
         for i in msg.match

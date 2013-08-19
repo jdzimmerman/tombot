@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="$PROJECT_DIR$/scripts/jira-issues.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="jira-issues.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="16" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.8735244">
+            <state line="66" column="62" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.79763913">
               <folding />
             </state>
           </provider>
@@ -83,7 +82,7 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-2.1153846">
+            <state line="72" column="54" selection-start="2716" selection-end="2723" vertical-scroll-proportion="-3.8461537">
               <folding />
             </state>
           </provider>
@@ -429,14 +428,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-2.1153846">
+        <state line="72" column="54" selection-start="2716" selection-end="2723" vertical-scroll-proportion="-3.8461537">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="16" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.8735244">
+        <state line="66" column="62" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.79763913">
           <folding />
         </state>
       </provider>
