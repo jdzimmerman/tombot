@@ -80,8 +80,7 @@ module.exports = (robot) ->
     msg.http(url)
       .header('Content-Length', data.length)
       .auth(auth)
-      .query(data)
-      .post() (err, res, body) ->
+      .post(data) (err, res, body) ->
         console.log(err)
         console.log(res)
         console.log(body)
