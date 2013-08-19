@@ -1,0 +1,11 @@
+HTTP/1.1 405 Method Not Allowed
+Server: nginx/1.2.6
+Date: Mon, 19 Aug 2013 15:47:19 GMT
+Content-Type: text/html;charset=utf-8
+Content-Length: 1034
+Connection: keep-alive
+X-AREQUESTID: 647x850018x1
+Set-Cookie: atlassian.xsrf.token=BKR6-YUNT-W4C2-I5JD|80ef35364e60407a7d8d4c99304f310da4c7f9ee|lout; Path=/
+X-AUSERNAME: anonymous
+Allow: GET,DELETE,OPTIONS,HEAD,PUT
+

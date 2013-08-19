@@ -28,6 +28,10 @@ issueList = []
 issueState = process.env.HUBOT_JIRA_ISSUE_STATES
 issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defaults
 
+username = process.env.HUBOT_JIRA_USER
+password = process.env.HUBOT_JIRA_PASSWORD
+domain = process.env.HUBOT_JIRA_DOMAIN
+
 
 module.exports = (robot) ->
   #**********************
@@ -64,6 +68,22 @@ module.exports = (robot) ->
 
 
 
+  jiraPattern = "/\\b(" + reducedPrefixes + "-)(\\d+)\\b/g (.*)"
+
+  robot.hear eval(jiraPattern), (msg) ->
+    msg.send("Matched Word is: "+msg.match[2])
+    auth = "#{username}:#{password}"
+    for i in msg.match
+      issue = i.toUpperCase()
+      path = '/rest/api/2/issue/'+issue+"/transitions"
+      url = "https://" + domain + path
+      msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
+          .auth(auth)
+          .post({"transition":"5"}) (err, res, body) ->
+            try
+              json = JSON.parse(body)
+              msg.send(json)
+
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
@@ -81,9 +101,7 @@ module.exports = (robot) ->
 
 getIssues = (msg, issueState, project, callback) ->
 
-  username = process.env.HUBOT_JIRA_USER
-  password = process.env.HUBOT_JIRA_PASSWORD
-  domain = process.env.HUBOT_JIRA_DOMAIN
+
 
   #msg.send "Forming Query..."
 
