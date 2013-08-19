@@ -77,12 +77,12 @@ module.exports = (robot) ->
     url = "https://" + domain + path
     msg.send(url)
     data={"transition":{"id":"5"}}
-    msg.send("Posting: "+JSON.stringify(data))
     msg.http(url)
       .header('Content-Length', data.length)
       .header('Content-Type', "application/json")
       .auth(auth)
       .post(JSON.stringify(data)) (err, res, body) ->
+        msg.send(res.statusCode)
         console.log(err)
         console.log(res)
         console.log(body)
