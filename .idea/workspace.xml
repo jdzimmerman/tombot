@@ -14,7 +14,7 @@
     <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409288684" ignored="false" />
     <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376410336210" ignored="false" />
     <file path="/jira-lookup.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376412212049" ignored="false" />
-    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376940210497" ignored="false" />
+    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376940809158" ignored="false" />
     <file path="/jira-issues.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376936311335" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="34" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.5439469">
+            <state line="80" column="43" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.5439469">
               <folding />
             </state>
           </provider>
@@ -425,7 +425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="34" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.5439469">
+        <state line="80" column="43" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.5439469">
           <folding />
         </state>
       </provider>
