@@ -34,9 +34,10 @@ domain = process.env.HUBOT_JIRA_DOMAIN
 
 
 module.exports = (robot) ->
+  http = require 'https'
   #**********************
   #Listing of all projects
-  #**********************
+  #**********************=
   robot.hear /((show|list))? projects/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("op - Ops-New")
@@ -68,21 +69,32 @@ module.exports = (robot) ->
 
 
 
-  jiraPattern = "/\\b(" + reducedPrefixes + "-)(\\d+)\\b/g (.*)"
+  http.get {host: jiraDomain, auth: auth, path: "/rest/api/2/project"}, (res) ->
+    data = ''
+    res.on 'data', (chunk) ->
+      data += chunk.toString()
+    res.on 'end', () ->
+      json = JSON.parse(data)
+      jiraPrefixes = ( entry.key for entry in json )
+      reducedPrefixes = jiraPrefixes.reduce (x,y) -> x + "-|" + y
+      jiraPattern = "/\\b(" + reducedPrefixes + "-)(\\d+)\\b/g"
+      ic = process.env.HUBOT_JIRA_IGNORECASE
+      if ic == undefined || ic == "true"
+        jiraPattern += "i"
 
-  robot.hear eval(jiraPattern), (msg) ->
-    msg.send("Matched Word is: "+msg.match[2])
-    auth = "#{username}:#{password}"
-    for i in msg.match
-      issue = i.toUpperCase()
-      path = '/rest/api/2/issue/'+issue+"/transitions"
-      url = "https://" + domain + path
-      msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
-          .auth(auth)
-          .post({"transition":"5"}) (err, res, body) ->
-            try
-              json = JSON.parse(body)
-              msg.send(json)
+    robot.respond eval(jiraPattern), (msg) ->
+      msg.send("Matched Word is: "+msg.match[2])
+      auth = "#{username}:#{password}"
+      for i in msg.match
+        issue = i.toUpperCase()
+        path = '/rest/api/2/issue/'+issue+"/transitions"
+        url = "https://" + domain + path
+        msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
+            .auth(auth)
+            .post({"transition":"5"}) (err, res, body) ->
+              try
+                json = JSON.parse(body)
+                msg.send(json)
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->

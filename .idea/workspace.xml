@@ -14,7 +14,7 @@
     <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409288684" ignored="false" />
     <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376410336210" ignored="false" />
     <file path="/jira-lookup.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376412212049" ignored="false" />
-    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376928894576" ignored="false" />
+    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376929218238" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="jira-issues.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="4" selection-start="613" selection-end="653" vertical-scroll-proportion="-5.3461537">
+            <state line="21" column="2" selection-start="429" selection-end="451" vertical-scroll-proportion="-5.923077">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="45" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.37931034">
+            <state line="84" column="17" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.43103448">
               <folding />
             </state>
           </provider>
@@ -428,14 +428,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="4" selection-start="613" selection-end="653" vertical-scroll-proportion="-5.3461537">
+        <state line="21" column="2" selection-start="429" selection-end="451" vertical-scroll-proportion="-5.923077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="45" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.37931034">
+        <state line="84" column="17" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.43103448">
           <folding />
         </state>
       </provider>
