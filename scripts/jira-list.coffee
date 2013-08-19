@@ -31,6 +31,7 @@ issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defa
 username = process.env.HUBOT_JIRA_USER
 password = process.env.HUBOT_JIRA_PASSWORD
 domain = process.env.HUBOT_JIRA_DOMAIN
+auth = "#{username}:#{password}"
 
 
 module.exports = (robot) ->
@@ -69,7 +70,7 @@ module.exports = (robot) ->
 
 
 
-  http.get {host: jiraDomain, auth: auth, path: "/rest/api/2/project"}, (res) ->
+  http.get {host: domain, auth: auth, path: "/rest/api/2/project"}, (res) ->
     data = ''
     res.on 'data', (chunk) ->
       data += chunk.toString()
@@ -84,7 +85,7 @@ module.exports = (robot) ->
 
     robot.respond eval(jiraPattern), (msg) ->
       msg.send("Matched Word is: "+msg.match[2])
-      auth = "#{username}:#{password}"
+
       for i in msg.match
         issue = i.toUpperCase()
         path = '/rest/api/2/issue/'+issue+"/transitions"
