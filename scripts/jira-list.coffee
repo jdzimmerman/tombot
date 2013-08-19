@@ -71,7 +71,7 @@ module.exports = (robot) ->
 
 
   robot.respond /move (.*)?/i, (msg) ->
-    msg.send("Matched Word is: "+msg.match[2])
+    msg.send("Matched Word is: "+msg.match[1])
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.http(url)
