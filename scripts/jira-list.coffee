@@ -69,7 +69,6 @@ module.exports = (robot) ->
     msg.send("<jiraTicketNumber> ready to deploy - moves the jira ticket to 'merged'")
 
 
-  QS = require 'querystring'
   robot.respond /move (.*)? (.*)?/i, (msg) ->
 
     issue=msg.match[1]
