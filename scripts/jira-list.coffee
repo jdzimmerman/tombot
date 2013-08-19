@@ -76,12 +76,12 @@ module.exports = (robot) ->
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
     msg.send(url)
-    data= data = QS.stringify({"transition":"5"})
+    data= data = '{"transition":"5"}'
     msg.http(url)
       .header('Content-Length', data.length)
       .header('Content-Type', "application/json")
       .auth(auth)
-      .post(data) (err, res, body) ->
+      .post("'"+data+"'") (err, res, body) ->
         console.log(err)
         console.log(res)
         console.log(body)
