@@ -72,14 +72,16 @@ module.exports = (robot) ->
 
   robot.respond /move (.*)?/i, (msg) ->
     msg.send("Matched Word is: "+msg.match[1])
+    issue=msg.match[1]
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
+    msg.send(url)
     msg.http(url)
       .auth(auth)
       .post({"transition":"5"}) (err, res, body) ->
-        try
-          json = JSON.parse(body)
-          msg.send(json)
+        msg.send("Post returned: "+JSON.parse(body))
+        json = JSON.parse(body)
+        msg.send(json)
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
