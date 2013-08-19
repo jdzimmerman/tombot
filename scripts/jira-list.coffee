@@ -83,19 +83,19 @@ module.exports = (robot) ->
       if ic == undefined || ic == "true"
         jiraPattern += "i"
 
-    robot.respond eval(jiraPattern), (msg) ->
-      msg.send("Matched Word is: "+msg.match[2])
+      robot.respond eval(jiraPattern), (msg) ->
+        msg.send("Matched Word is: "+msg.match[2])
 
-      for i in msg.match
-        issue = i.toUpperCase()
-        path = '/rest/api/2/issue/'+issue+"/transitions"
-        url = "https://" + domain + path
-        msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
-            .auth(auth)
-            .post({"transition":"5"}) (err, res, body) ->
-              try
-                json = JSON.parse(body)
-                msg.send(json)
+        for i in msg.match
+          issue = i.toUpperCase()
+          path = '/rest/api/2/issue/'+issue+"/transitions"
+          url = "https://" + domain + path
+          msg.http(jiraUrl + "/rest/api/2/issue/" + issue)
+              .auth(auth)
+              .post({"transition":"5"}) (err, res, body) ->
+                try
+                  json = JSON.parse(body)
+                  msg.send(json)
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
