@@ -79,7 +79,7 @@ module.exports = (robot) ->
     data= data = QS.stringify({"transition":"5"})
     msg.http(url)
       .auth(auth)
-      .post(data) (err, res, body) ->
+      .get() (err, res, body) ->
         msg.send("Post returned: "+JSON.parse(body))
         json = JSON.parse(body)
         msg.send(json)
