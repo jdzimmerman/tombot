@@ -63,16 +63,3 @@ module.exports = (robot) ->
                   catch reallyError
                     msg.send "[*ERROR*] " + reallyError
 
-      robot.respond /move (.*)?/i, (msg) ->
-        msg.send("Matched Word is: "+msg.match[2])
-
-        for i in msg.match
-          issue = i.toUpperCase()
-          path = '/rest/api/2/issue/'+issue+"/transitions"
-          url = "https://" + domain + path
-          msg.http(url)
-            .auth(auth)
-            .post({"transition":"5"}) (err, res, body) ->
-              try
-                json = JSON.parse(body)
-                msg.send(json)

@@ -70,6 +70,18 @@ module.exports = (robot) ->
 
 
 
+  robot.respond /move (.*)?/i, (msg) ->
+    msg.send("Matched Word is: "+msg.match[2])
+    path = '/rest/api/2/issue/'+issue+"/transitions"
+    url = "https://" + domain + path
+    msg.http(url)
+      .auth(auth)
+      .post({"transition":"5"}) (err, res, body) ->
+        try
+          json = JSON.parse(body)
+          msg.send(json)
+
+
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
     else if msg.match[5] then msg.match[5]
