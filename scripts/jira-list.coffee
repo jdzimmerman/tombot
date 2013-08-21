@@ -158,15 +158,15 @@ module.exports = (robot) ->
 
 
 
-  robot.respond /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
-    issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
-    else if msg.match[5] then msg.match[5]
+  robot.respond /((show|list))? (.*) issues (.*)?/i, (msg) ->
+    issueState = msg.match[4]
     project = if msg.match[3] then msg.match[3] else "ops-req"
 
-    if issueState.toLowerCase() == "todo" then issueState = "open,reopened"
-    if issueState.toLowerCase() == "done" then issueState = "resolved,closed"
-    if issueState.toLowerCase() == "test" then issueState = "qa"
-    if issueState.toLowerCase() == "ready to deploy" then issueState = "merged,'in deployment'"
+    if issueState.toLowerCase() == "todo" then issueState = "'open','reopened'"
+    else if issueState.toLowerCase() == "done" then issueState = "'resolved','closed'"
+    else if issueState.toLowerCase() == "test" then issueState = "'qa'"
+    else if issueState.toLowerCase() == "ready to deploy" then issueState = "'merged','in deployment'"
+    else issueState = "'"+issueState+"'"
     issueState = "("+issueState+")"
     #msg.send "Searching for issues in project "+project
     getIssues msg, issueState, project, (response) ->
