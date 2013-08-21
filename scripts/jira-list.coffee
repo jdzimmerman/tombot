@@ -61,17 +61,7 @@ module.exports = (robot) ->
     msg.send("show|list projects - list all available jira projects")
     msg.send("show/list <projectCode|all> issues (in) <status> - list all issues from the selected project with the selected status")
     msg.send("<jiraTicketNumber> Comment <comment> - add a comment to the issue selected")
-    msg.send("<jiraTicketNumber> to start - moves the jira ticket to 'in progress'")
-    msg.send("<jiraTicketNumber> to schedule - moves the jira ticket to 'scheduled'")
-    msg.send("<jiraTicketNumber> to resolved - moves the jira ticket to 'resovled'")
-    msg.send("<jiraTicketNumber> to done - moves the jira ticket to 'resovled'")
-    msg.send("<jiraTicketNumber> to close - moves the jira ticket to 'closed'")
-    msg.send("<jiraTicketNumber> to in test - moves the jira ticket to 'qa'")
-    msg.send("<jiraTicketNumber> to qa - moves the jira ticket to 'qa'")
-    msg.send("<jiraTicketNumber> to code review - moves the jira ticket to 'code review'")
-    msg.send("<jiraTicketNumber> to merge - moves the jira ticket to 'merged'")
-    msg.send("<jiraTicketNumber> to move to production - moves the jira ticket to 'merged'")
-    msg.send("<jiraTicketNumber> to ready to deploy - moves the jira ticket to 'Ready To Deploy'")
+    msg.send("move <jiraTicketNumber> to <status> - moves the jira ticket to the new status.  Many statuses work, consult your jira board for your project statuses")
 
   #*****************************
   # Move Command
@@ -121,7 +111,7 @@ module.exports = (robot) ->
             msg.send("Successfully moved "+issue)
             path = '/rest/api/2/issue/'+issue+'/comment'
             url ="https://" + domain + path
-            data={"body":"TOMBOT: "+msg.message.user.email+" moved "+issue+" to "+actionAlias}
+            data={"body":"TOMBOT: "+msg.message.user.name+" moved "+issue+" to "+actionAlias}
 
             #call the comment api
             msg.http(url)
