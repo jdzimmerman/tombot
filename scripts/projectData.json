@@ -1,0 +1,206 @@
+{
+    "Projects":[
+        {
+            "Code":"pt",
+            "Alias":"Project Test",
+            "Commands":[
+                {"Name":"start","Alias":"In Progress","Code":"5"},
+                {"Name":"in progress","Alias":"In Progress","Code":"5"}
+            ]
+        },
+        {
+            "Code":"com",
+            "Alias":"Compliance",
+            "Commands":[
+                {"Name":"start","Alias":"In Progress","Code":"11"},
+                {"Name":"in progress","Alias":"In Progress","Code":"11"},
+                {"Name":"in test","Alias":"In Test","Code":"151"},
+                {"Name":"qa","Alias":"In Test","Code":"151"},
+                {"Name":"merged","Alias":"Ready To Deploy","Code":"111"},
+                {"Name":"deploy","Alias":"Ready To Deploy","Code":"111"},
+                {"Name":"done","Alias":"Closed","Code":"61"},
+                {"Name":"deployed","Alias":"Closed","Code":"61"},
+                {"Name":"Closed","Alias":"Ready To Deploy","Code":"61"}
+
+            ]
+        },
+        {
+            "Code":"mkt",
+            "Alias":"Marketing",
+            "Commands":[
+                {"Name":"started","Alias":"Started","Code":"11"},
+                {"Name":"start","Alias":"Started","Code":"11"},
+                {"Name":"in progress","Alias":"Started","Code":"11"},
+                {"Name":"code complete","Alias":"Finished","Code":"21"},
+                {"Name":"code completed","Alias":"Finished","Code":"21"},
+                {"Name":"finish","Alias":"Finished","Code":"21"},
+                {"Name":"finished","Alias":"Finished","Code":"21"},
+                {"Name":"delivered","Alias":"Delivered","Code":"31"},
+                {"Name":"passed code review","Alias":"Delivered","Code":"31"},
+                {"Name":"deploy","Alias":"Delivered","Code":"41"},
+                {"Name":"deployed","Alias":"Accepted","Code":"41"},
+                {"Name":"accept","Alias":"Accepted","Code":"41"},
+                {"Name":"accepted","Alias":"Accepted","Code":"41"},
+                {"Name":"closed","Alias":"Accepted","Code":"41"},
+                {"Name":"close","Alias":"Accepted","Code":"41"}
+            ]
+        },
+        {
+            "Code":"core",
+            "Alias":"Core Transactional",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"131"},
+                {"Name":"start","Alias":"In Progress","Code":"131"},
+                {"Name":"in progress","Alias":"In Progress","Code":"131"},
+                {"Name":"cr","Alias":"Code Review","Code":"161"},
+                {"Name":"code review","Alias":"Code Review","Code":"161"},
+                {"Name":"code reviewed","Alias":"Code Review","Code":"161"},
+                {"Name":"qa","Alias":"QA","Code":"171"},
+                {"Name":"deploy","Alias":"In Deployment","Code":"251"},
+                {"Name":"deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"in deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"resolve","Alias":"Resolved","Code":"261"},
+                {"Name":"resolved","Alias":"Resolved","Code":"261"},
+                {"Name":"done","Alias":"Resolved","Code":"261"},
+                {"Name":"close","Alias":"Resolved","Code":"261"}
+
+            ]
+        },
+        {
+            "Code":"ap",
+            "Alias":"App Team",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"131"},
+                {"Name":"start","Alias":"In Progress","Code":"131"},
+                {"Name":"in progress","Alias":"In Progress","Code":"131"},
+                {"Name":"cr","Alias":"Code Review","Code":"161"},
+                {"Name":"code review","Alias":"Code Review","Code":"161"},
+                {"Name":"code reviewed","Alias":"Code Review","Code":"161"},
+                {"Name":"qa","Alias":"QA","Code":"171"},
+                {"Name":"deploy","Alias":"In Deployment","Code":"251"},
+                {"Name":"deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"in deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"resolve","Alias":"Resolved","Code":"261"},
+                {"Name":"resolved","Alias":"Resolved","Code":"261"},
+                {"Name":"done","Alias":"Resolved","Code":"281"},
+                {"Name":"close","Alias":"Resolved","Code":"281"}
+
+            ]
+        },
+        {
+            "Code":"meme",
+            "Alias":"Meme Team",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"131"},
+                {"Name":"start","Alias":"In Progress","Code":"131"},
+                {"Name":"in progress","Alias":"In Progress","Code":"131"},
+                {"Name":"cr","Alias":"Code Review","Code":"161"},
+                {"Name":"code review","Alias":"Code Review","Code":"161"},
+                {"Name":"code reviewed","Alias":"Code Review","Code":"161"},
+                {"Name":"qa","Alias":"QA","Code":"171"},
+                {"Name":"deploy","Alias":"In Deployment","Code":"251"},
+                {"Name":"deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"in deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"resolve","Alias":"Resolved","Code":"261"},
+                {"Name":"resolved","Alias":"Resolved","Code":"261"},
+                {"Name":"done","Alias":"Resolved","Code":"261"},
+                {"Name":"close","Alias":"Resolved","Code":"261"}
+
+            ]
+        },
+        {
+            "Code":"uxui",
+            "Alias":"UX/UI Team",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"711"},
+                {"Name":"start","Alias":"In Progress","Code":"711"},
+                {"Name":"in progress","Alias":"In Progress","Code":"711"},
+                {"Name":"todo","Alias":"In Progress","Code":"711"},
+                {"Name":"do","Alias":"In Progress","Code":"711"},
+                {"Name":"in review","Alias":"Resolved","Code":"5"},
+                {"Name":"resolve","Alias":"Resolved","Code":"5"},
+                {"Name":"resolved","Alias":"Resolved","Code":"5"},
+                {"Name":"closed","Alias":"Closed","Code":"701"},
+                {"Name":"close","Alias":"Closed","Code":"701"},
+                {"Name":"done","Alias":"Closed","Code":"701"}
+            ]
+        },
+        {
+            "Code":"bo",
+            "Alias":"Back Office",
+            "Commands":[
+                {"Name":"started","Alias":"Started","Code":"11"},
+                {"Name":"start","Alias":"Started","Code":"11"},
+                {"Name":"in progress","Alias":"Started","Code":"11"},
+                {"Name":"code review","Alias":"Finished","Code":"31"},
+                {"Name":"integration","Alias":"Finished","Code":"31"},
+                {"Name":"cr","Alias":"Finished","Code":"31"},
+                {"Name":"qa","Alias":"Delivered","Code":"41"},
+                {"Name":"stage","Alias":"Delivered","Code":"41"},
+                {"Name":"merge","Alias":"Delivered","Code":"51"},
+                {"Name":"merged","Alias":"Accepted","Code":"51"},
+                {"Name":"production","Alias":"Accepted","Code":"51"},
+                {"Name":"close","Alias":"Accepted","Code":"61"},
+                {"Name":"closed","Alias":"Deployed","Code":"61"},
+                {"Name":"deploy","Alias":"Deployed","Code":"61"},
+                {"Name":"deployed","Alias":"D","Code":"61"}
+            ]
+        },
+        {
+            "Code":"ad",
+            "Alias":"Admin",
+            "Commands":[
+                {"Name":"started","Alias":"Started","Code":"11"},
+                {"Name":"start","Alias":"Started","Code":"11"},
+                {"Name":"in progress","Alias":"Started","Code":"11"},
+                {"Name":"finish","Alias":"Finished","Code":"21"},
+                {"Name":"finished","Alias":"Finished","Code":"21"},
+                {"Name":"cr","Alias":"Finished","Code":"21"},
+                {"Name":"deliver","Alias":"Delivered","Code":"31"},
+                {"Name":"delivered","Alias":"Delivered","Code":"31"},
+                {"Name":"qa","Alias":"Delivered","Code":"31"},
+                {"Name":"accept","Alias":"Accepted","Code":"41"},
+                {"Name":"accepted","Alias":"Accepted","Code":"41"},
+                {"Name":"merged","Alias":"Accepted","Code":"41"},
+                {"Name":"deploy","Alias":"Deployed","Code":"371"},
+                {"Name":"deployed","Alias":"Deployed","Code":"371"},
+                {"Name":"closed","Alias":"D","Code":"371"}
+            ]
+        },
+        {
+            "Code":"op",
+            "Alias":"Ops New",
+            "Commands":[
+                {"Name":"start progress","Alias":"Started","Code":"4"},
+                {"Name":"start","Alias":"Started","Code":"4"},
+                {"Name":"ideas","Alias":"Started","Code":"4"},
+                {"Name":"prioritize","Alias":"Finished","Code":"731"},
+                {"Name":"prioritized","Alias":"Finished","Code":"731"},
+                {"Name":"backlog","Alias":"Finished","Code":"731"},
+                {"Name":"in progress","Alias":"Delivered","Code":"801"},
+                {"Name":"resolve","Alias":"Accepted","Code":"5"},
+                {"Name":"resolved","Alias":"Accepted","Code":"5"},
+                {"Name":"close","Alias":"Deployed","Code":"701"},
+                {"Name":"closed","Alias":"Deployed","Code":"701"},
+                {"Name":"done","Alias":"D","Code":"701"}
+            ]
+        },
+        {
+            "Code":"opreq",
+            "Alias":"Ops Requests",
+            "Commands":[
+                {"Name":"scheduled","Alias":"Scheduled","Code":"4"},
+                {"Name":"in progress","Alias":"In Progress","Code":"711"},
+                {"Name":"start","Alias":"In Progress","Code":"711"},
+                {"Name":"done","Alias":"Resolved","Code":"5"},
+                {"Name":"resolved","Alias":"Resolved","Code":"5"}
+            ]
+        }
+    ]
+}
