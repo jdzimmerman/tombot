@@ -46,6 +46,29 @@
             ]
         },
         {
+            "Code":"core",
+            "Alias":"Core Transactional",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"131"},
+                {"Name":"start","Alias":"In Progress","Code":"131"},
+                {"Name":"in progress","Alias":"In Progress","Code":"131"},
+                {"Name":"cr","Alias":"Code Review","Code":"161"},
+                {"Name":"code review","Alias":"Code Review","Code":"161"},
+                {"Name":"code reviewed","Alias":"Code Review","Code":"161"},
+                {"Name":"qa","Alias":"QA","Code":"171"},
+                {"Name":"deploy","Alias":"In Deployment","Code":"251"},
+                {"Name":"deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"in deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployed","Alias":"In Deployment","Code":"251"},
+                {"Name":"needs deployment","Alias":"In Deployment","Code":"251"},
+                {"Name":"resolve","Alias":"Resolved","Code":"261"},
+                {"Name":"resolved","Alias":"Resolved","Code":"261"},
+                {"Name":"done","Alias":"Resolved","Code":"261"},
+                {"Name":"close","Alias":"Resolved","Code":"261"}
+
+            ]
+        },
+        {
             "Code":"meme",
             "Alias":"Meme Team",
             "Commands":[
