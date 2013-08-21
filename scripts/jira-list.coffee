@@ -58,10 +58,10 @@ module.exports = (robot) ->
   #Listing of all Jira Commands
   #**********************
   robot.hear /jira ((commands|help))/i, (msg) ->
-    msg.send("show|list projects - list all available jira projects")
-    msg.send("show/list <projectCode|all> issues (in) <status> - list all issues from the selected project with the selected status")
-    msg.send("<jiraTicketNumber> Comment <comment> - add a comment to the issue selected")
-    msg.send("move <jiraTicketNumber> to <status> - moves the jira ticket to the new status.  Many statuses work, consult your jira board for your project statuses")
+    msg.send("/code show|list projects                                 #list all available jira projects")
+    msg.send("/code show/list <projectCode|all> issues (in) <status>   #list all issues from the selected project with the selected status")
+    msg.send("/code <jiraTicketNumber> Comment <comment>               #add a comment to the issue selected")
+    msg.send("/code move <jiraTicketNumber> to <status>                #moves the jira ticket to the new status (Many statuses work)")
 
   #*****************************
   # Move Command
