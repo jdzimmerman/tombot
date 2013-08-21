@@ -32,6 +32,7 @@
                 {"Name":"start","Alias":"Started","Code":"11"},
                 {"Name":"in progress","Alias":"Started","Code":"11"},
                 {"Name":"code complete","Alias":"Finished","Code":"21"},
+                {"Name":"code completed","Alias":"Finished","Code":"21"},
                 {"Name":"finish","Alias":"Finished","Code":"21"},
                 {"Name":"finished","Alias":"Finished","Code":"21"},
                 {"Name":"delivered","Alias":"Delivered","Code":"31"},
