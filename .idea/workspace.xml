@@ -78,7 +78,7 @@
       <file leaf-file-name="projectData.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="71" selection-start="2479" selection-end="2482" vertical-scroll-proportion="0.31553397">
+            <state line="89" column="62" selection-start="4674" selection-end="4674" vertical-scroll-proportion="0.9029126">
               <folding />
             </state>
           </provider>
@@ -400,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="3" selection-start="2448" selection-end="2476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/dilbert.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="64" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
@@ -431,9 +424,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="3" selection-start="2448" selection-end="2476" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="71" selection-start="2479" selection-end="2482" vertical-scroll-proportion="0.31553397">
+        <state line="89" column="62" selection-start="4674" selection-end="4674" vertical-scroll-proportion="0.9029126">
           <folding />
         </state>
       </provider>
