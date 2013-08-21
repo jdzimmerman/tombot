@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wolfram.coffee" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="$PROJECT_DIR$/scripts/jira-issues.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,7 +122,7 @@
       <file leaf-file-name="jira-issues.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="2" selection-start="333" selection-end="333" vertical-scroll-proportion="0.4361874">
+            <state line="39" column="45" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.53958">
               <folding />
             </state>
           </provider>
@@ -448,7 +448,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="2" selection-start="333" selection-end="333" vertical-scroll-proportion="0.4361874">
+        <state line="39" column="45" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.53958">
           <folding />
         </state>
       </provider>
