@@ -148,10 +148,10 @@ module.exports = (robot) ->
     msg.send("Issue: "+issue+" Comment: "+comment)
     path = '/rest/api/2/issue/'+issue+"/comment"
     url = "https://" + domain + path
-    username = msg.message.user.email
+    username = msg.message.user.name
     if username == "undefined"
       username or= "PM User"
-    data={"body":msg.message.user.email+": "+comment}
+    data={"body":username+": "+comment}
     #call the comment api
     msg.http(url)
       .header('Content-Length', data.length)
