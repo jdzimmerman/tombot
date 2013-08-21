@@ -199,5 +199,5 @@ getIssues = (msg, issueState, project, callback) ->
     .get() (err, res, body) ->
       json = JSON.parse(body)
       if json.issues? then for issue in json.issues
-        msg.send(issue.key+"("+issue.fields.issuetype.name+") - "+issue.self)
+        msg.send(issue.key+"("+issue.fields.summary+") - http://"+domain+"/browse/"+issue)
 
