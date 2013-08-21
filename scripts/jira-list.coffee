@@ -66,7 +66,7 @@ module.exports = (robot) ->
   #*****************************
   # Move Command
   #*****************************
-  robot.hear /move (.*) to (.*)/i, (msg) ->
+  robot.respond /move (.*) to (.*)/i, (msg) ->
     issue=msg.match[1]
     action=msg.match[2]
     #msg.send("Action: "+action)
@@ -133,7 +133,7 @@ module.exports = (robot) ->
   #*****************************
   # Comment Command
   #*****************************
-  robot.hear /(.*) comment (.*)/i, (msg) ->
+  robot.respond /(.*) comment (.*)/i, (msg) ->
     issue=msg.match[1]
     comment=msg.match[2]
     # msg.send("Issue: "+issue+" Comment: "+comment)
@@ -157,7 +157,7 @@ module.exports = (robot) ->
 
 
 
-  robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
+  robot.respond /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->
     issueState = if msg.match[4] and msg.match[4] != "in" and msg.match[4] !=" in" then msg.match[4]
     else if msg.match[5] then msg.match[5]
     project = if msg.match[3] then msg.match[3] else "ops-req"
