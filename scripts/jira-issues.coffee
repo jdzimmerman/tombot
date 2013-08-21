@@ -28,7 +28,4 @@ module.exports = (robot) ->
 
   http.get {host: jiraDomain, auth: auth, path: "/rest/api/2/project"}, (res) ->
     data = ''
-    res.on 'data', (chunk) ->
-      data += chunk.toString()
-    res.on 'end', () ->
-      json = JSON.parse(data)
+

@@ -120,7 +120,7 @@
       <file leaf-file-name="jira-issues.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="6" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8239095">
+            <state line="30" column="4" selection-start="750" selection-end="750" vertical-scroll-proportion="0.726979">
               <folding />
             </state>
           </provider>
@@ -446,7 +446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="6" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8239095">
+        <state line="30" column="4" selection-start="750" selection-end="750" vertical-scroll-proportion="0.726979">
           <folding />
         </state>
       </provider>
