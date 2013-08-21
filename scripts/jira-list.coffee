@@ -69,7 +69,7 @@ module.exports = (robot) ->
   robot.hear /move (.*) to (.*)/i, (msg) ->
     issue=msg.match[1]
     action=msg.match[2]
-    msg.send("Action: "+action)
+    #msg.send("Action: "+action)
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
 
@@ -78,7 +78,7 @@ module.exports = (robot) ->
 
     # Read json file for project transition commands
     fs = require 'fs'
-    msg.send("Directory: "+__dirname)
+    #msg.send("Directory: "+__dirname)
     fs.readFile __dirname+'/projectData.json', (err, projectData) ->
       if err
         msg.send("Error: "+err)
@@ -97,7 +97,7 @@ module.exports = (robot) ->
               actionAlias = command.Alias
               transitionCode = command.Code
 
-      msg.send("Alias: "+actionAlias+ " TransitionCode: "+transitionCode)
+      #msg.send("Alias: "+actionAlias+ " TransitionCode: "+transitionCode)
       data={"transition":{"id":transitionCode}}
 
       #call the transition api
@@ -126,6 +126,7 @@ module.exports = (robot) ->
           else if(res.statusCode==400)
             msg.send("That Transition Is Not Available for "+issue)
           else
+            console.log(err)
             msg.send("Error trying to move "+issue)
 
 
