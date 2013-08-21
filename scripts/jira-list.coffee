@@ -136,7 +136,7 @@ module.exports = (robot) ->
   robot.hear /(.*) comment (.*)/i, (msg) ->
     issue=msg.match[1]
     comment=msg.match[2]
-    msg.send("Issue: "+issue+" Comment: "+comment)
+    # msg.send("Issue: "+issue+" Comment: "+comment)
     path = '/rest/api/2/issue/'+issue+"/comment"
     url = "https://" + domain + path
     username = msg.message.user.name
@@ -169,7 +169,7 @@ module.exports = (robot) ->
     issueState = "("+issueState+")"
     #msg.send "Searching for issues in project "+project
     getIssues msg, issueState, project, (response) ->
-      msg.send response
+      #msg.send response
 
 getIssues = (msg, issueState, project, callback) ->
 
