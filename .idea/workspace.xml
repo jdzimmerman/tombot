@@ -16,7 +16,7 @@
     <file path="/jira-lookup.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376412212049" ignored="false" />
     <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377098540248" ignored="false" />
     <file path="/jira-issues.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377018170601" ignored="false" />
-    <file path="/projectData.json" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377034774697" ignored="false" />
+    <file path="/projectData.json" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377102628696" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <file leaf-file-name="projectData.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="24" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.5825243">
+            <state line="66" column="61" selection-start="3402" selection-end="3402" vertical-scroll-proportion="0.92718446">
               <folding />
             </state>
           </provider>
@@ -433,7 +433,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="24" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.5825243">
+        <state line="66" column="61" selection-start="3402" selection-end="3402" vertical-scroll-proportion="0.92718446">
           <folding />
         </state>
       </provider>
