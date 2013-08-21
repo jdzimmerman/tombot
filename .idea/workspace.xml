@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/projectData.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jira-issues.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/wolfram.coffee" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tombot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,8 +18,9 @@
     <file path="/jira-bugs.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376409288684" ignored="false" />
     <file path="/jira-list-items.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376410336210" ignored="false" />
     <file path="/jira-lookup.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376412212049" ignored="false" />
-    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376944114835" ignored="false" />
-    <file path="/jira-issues.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1376936311335" ignored="false" />
+    <file path="/jira-list.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377043196793" ignored="false" />
+    <file path="/jira-issues.coffee" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377018170601" ignored="false" />
+    <file path="/projectData.json" changelist="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" time="1377034774697" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +67,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-issues.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
+      <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="61" selection-start="1569" selection-end="1569" vertical-scroll-proportion="-11.0">
-              <folding />
+            <state line="151" column="29" selection-start="5755" selection-end="5755" vertical-scroll-proportion="0.6899841">
+              <folding>
+                <marker date="1377043286000" expanded="true" signature="1958:2030" placeholder="..." />
+                <marker date="1377043286000" expanded="true" signature="1976:2030" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira-list.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
+      <file leaf-file-name="projectData.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="33" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.3233831">
+            <state line="25" column="34" selection-start="885" selection-end="885" vertical-scroll-proportion="-15.625">
               <folding />
             </state>
           </provider>
@@ -132,6 +140,7 @@
         <option value="$PROJECT_DIR$/scripts/jira-list-items.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-lookup.coffee" />
         <option value="$PROJECT_DIR$/scripts/jira-issues.coffee" />
+        <option value="$PROJECT_DIR$/scripts/projectData.json" />
         <option value="$PROJECT_DIR$/scripts/jira-list.coffee" />
       </list>
     </option>
@@ -374,20 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dilbert.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="64" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="3" selection-start="2448" selection-end="2476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/reddit.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="11" selection-start="357" selection-end="359" vertical-scroll-proportion="0.5311973">
@@ -409,6 +404,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/info.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="3" selection-start="2448" selection-end="2476" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/dilbert.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="64" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -416,17 +425,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jira-issues.coffee">
+    <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="61" selection-start="1569" selection-end="1569" vertical-scroll-proportion="-11.0">
+        <state line="25" column="34" selection-start="885" selection-end="885" vertical-scroll-proportion="-15.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jira-list.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="33" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.3233831">
-          <folding />
+        <state line="151" column="29" selection-start="5755" selection-end="5755" vertical-scroll-proportion="0.6899841">
+          <folding>
+            <marker date="1377043286000" expanded="true" signature="1958:2030" placeholder="..." />
+            <marker date="1377043286000" expanded="true" signature="1976:2030" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

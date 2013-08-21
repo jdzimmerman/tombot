@@ -29,8 +29,11 @@ issueState = process.env.HUBOT_JIRA_ISSUE_STATES
 issueState or= "open|in progress|qa|merged|reopened|scheduled|closed" #some defaults
 
 username = process.env.HUBOT_JIRA_USER
+username or= "pm"
 password = process.env.HUBOT_JIRA_PASSWORD
+password or="s3ndgr1d"
 domain = process.env.HUBOT_JIRA_DOMAIN
+domain or="jira.sendgrid.net"
 auth = "#{username}:#{password}"
 
 
@@ -57,38 +60,110 @@ module.exports = (robot) ->
   robot.hear /jira ((commands|help))/i, (msg) ->
     msg.send("show|list projects - list all available jira projects")
     msg.send("show/list <projectCode|all> issues (in) <status> - list all issues from the selected project with the selected status")
-    msg.send("<jiraTicketNumber> start - moves the jira ticket to 'in progress'")
-    msg.send("<jiraTicketNumber> schedule - moves the jira ticket to 'scheduled'")
-    msg.send("<jiraTicketNumber> resolve - moves the jira ticket to 'resovled'")
-    msg.send("<jiraTicketNumber> close - moves the jira ticket to 'closed'")
-    msg.send("<jiraTicketNumber> in test - moves the jira ticket to 'qa'")
-    msg.send("<jiraTicketNumber> qa - moves the jira ticket to 'qa'")
-    msg.send("<jiraTicketNumber> code review - moves the jira ticket to 'code review'")
-    msg.send("<jiraTicketNumber> merge - moves the jira ticket to 'merged'")
-    msg.send("<jiraTicketNumber> move to production - moves the jira ticket to 'merged'")
-    msg.send("<jiraTicketNumber> ready to deploy - moves the jira ticket to 'merged'")
+    msg.send("<jiraTicketNumber> Comment <comment> - add a comment to the issue selected")
+    msg.send("<jiraTicketNumber> to start - moves the jira ticket to 'in progress'")
+    msg.send("<jiraTicketNumber> to schedule - moves the jira ticket to 'scheduled'")
+    msg.send("<jiraTicketNumber> to resolved - moves the jira ticket to 'resovled'")
+    msg.send("<jiraTicketNumber> to done - moves the jira ticket to 'resovled'")
+    msg.send("<jiraTicketNumber> to close - moves the jira ticket to 'closed'")
+    msg.send("<jiraTicketNumber> to in test - moves the jira ticket to 'qa'")
+    msg.send("<jiraTicketNumber> to qa - moves the jira ticket to 'qa'")
+    msg.send("<jiraTicketNumber> to code review - moves the jira ticket to 'code review'")
+    msg.send("<jiraTicketNumber> to merge - moves the jira ticket to 'merged'")
+    msg.send("<jiraTicketNumber> to move to production - moves the jira ticket to 'merged'")
+    msg.send("<jiraTicketNumber> to ready to deploy - moves the jira ticket to 'Ready To Deploy'")
 
-
-  robot.respond /move (.*)? (.*)?/i, (msg) ->
-
+  #*****************************
+  # Move Command
+  #*****************************
+  robot.hear /move (.*) to (.*)/i, (msg) ->
     issue=msg.match[1]
     action=msg.match[2]
     msg.send("Action: "+action)
     path = '/rest/api/2/issue/'+issue+"/transitions"
     url = "https://" + domain + path
-    msg.send(url)
-    data={"transition":{"id":"5"}}
+
+    actionAlias = ''
+    transitionCode = ''
+
+    # Read json file for project transition commands
+    fs = require 'fs'
+    msg.send("Directory: "+__dirname)
+    fs.readFile __dirname+'/projectData.json', (err, projectData) ->
+      if err
+        msg.send("Error: "+err)
+      projectData = JSON.parse(projectData)
+
+      #get the project code from the issue name
+      issueCode = issue.split("-");
+
+      #loop through the projects and find the current one from the issueCode
+      for project in projectData.Projects
+        if project.Code == issueCode[0].toLowerCase()
+          #we found the correct project, now find the correct command
+          for command in project.Commands
+            if command.Name == action.toLowerCase()
+              #set the transitionCode and actionAlias from the json data
+              actionAlias = command.Alias
+              transitionCode = command.Code
+
+      msg.send("Alias: "+actionAlias+ " TransitionCode: "+transitionCode)
+      data={"transition":{"id":transitionCode}}
+
+      #call the transition api
+      msg.http(url)
+        .header('Content-Length', data.length)
+        .header('Content-Type', "application/json")
+        .auth(auth)
+        .post(JSON.stringify(data)) (err, res, body) ->
+          #if successfull tell the user and then post comment
+          if(res.statusCode==204)
+            msg.send("Successfully moved "+issue)
+            path = '/rest/api/2/issue/'+issue+'/comment'
+            url ="https://" + domain + path
+            data={"body":"TOMBOT: "+msg.message.user.email+" moved "+issue+" to "+actionAlias}
+
+            #call the comment api
+            msg.http(url)
+              .header('Content-Length', data.length)
+              .header('Content-Type', "application/json")
+              .auth(auth)
+              .post(JSON.stringify(data)) (err, res, body) ->
+                if err
+                  console.log(err)
+                  console.log(body+res)
+
+          else if(res.statusCode==400)
+            msg.send("That Transition Is Not Available for "+issue)
+          else
+            msg.send("Error trying to move "+issue)
+
+
+  #*****************************
+  # Comment Command
+  #*****************************
+  robot.hear /(.*) comment (.*)/i, (msg) ->
+    issue=msg.match[1]
+    comment=msg.match[2]
+    msg.send("Issue: "+issue+" Comment: "+comment)
+    path = '/rest/api/2/issue/'+issue+"/comment"
+    url = "https://" + domain + path
+    username = msg.message.user.email
+    if username == "undefined"
+      username or= "PM User"
+    data={"body":msg.message.user.email+": "+comment}
+    #call the comment api
     msg.http(url)
       .header('Content-Length', data.length)
       .header('Content-Type', "application/json")
       .auth(auth)
       .post(JSON.stringify(data)) (err, res, body) ->
-        if(res.statusCode==204)
-          msg.send("Successfully moved "+issue)
-        else if(res.statusCode==400)
-          msg.send("That Transition Is Not Available for "+issue)
+        if err
+          console.log(err)
+          console.log(body+res)
         else
-          msg.send("Error trying to move "+issue)
+          msg.send("Succefully Addded Comment to "+issue)
+
 
 
   robot.hear /((show|list))? (.*) issues( in)? (.*)?/i, (msg) ->

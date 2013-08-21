@@ -1,0 +1,34 @@
+{
+    "Projects":[
+        {
+            "Code":"pt",
+            "Alias":"Project Test",
+            "Commands":[
+                {"Name":"start","Alias":"In Progress","Code":"5"},
+                {"Name":"in progress","Alias":"In Progress","Code":"5"}
+            ]
+        },
+        {
+            "Code":"com",
+            "Alias":"Compliance",
+            "Commands":[
+                {"Name":"start","Alias":"In Progress","Code":"11"},
+                {"Name":"in progress","Alias":"In Progress","Code":"11"},
+                {"Name":"in test","Alias":"In Test","Code":"151"},
+                {"Name":"qa","Alias":"In Test","Code":"151"},
+                {"Name":"ready to deploy","Alias":"Ready To Deploy","Code":"151"}
+            ]
+        },
+        {
+            "Code":"opreq",
+            "Alias":"Ops Requests",
+            "Commands":[
+                {"Name":"scheduled","Alias":"Scheduled","Code":"4"},
+                {"Name":"in progress","Alias":"In Progress","Code":"711"},
+                {"Name":"start","Alias":"In Progress","Code":"711"},
+                {"Name":"done","Alias":"Resolved","Code":"5"},
+                {"Name":"resolved","Alias":"Resolved","Code":"5"}
+            ]
+        }
+    ]
+}
