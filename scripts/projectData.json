@@ -17,7 +17,7 @@
                 {"Name":"in test","Alias":"In Test","Code":"151"},
                 {"Name":"qa","Alias":"In Test","Code":"151"},
                 {"Name":"merged","Alias":"Ready To Deploy","Code":"111"},
-                {"Name":"ready deploy","Alias":"Ready To Deploy","Code":"111"},
+                {"Name":"deploy","Alias":"Ready To Deploy","Code":"111"},
                 {"Name":"done","Alias":"Closed","Code":"61"},
                 {"Name":"deployed","Alias":"Closed","Code":"61"},
                 {"Name":"Closed","Alias":"Ready To Deploy","Code":"61"}
@@ -43,6 +43,23 @@
                 {"Name":"accepted","Alias":"Accepted","Code":"41"},
                 {"Name":"closed","Alias":"Accepted","Code":"41"},
                 {"Name":"close","Alias":"Accepted","Code":"41"}
+            ]
+        },
+        {
+            "Code":"uxui",
+            "Alias":"UX/UI Team",
+            "Commands":[
+                {"Name":"started","Alias":"In Progress","Code":"711"},
+                {"Name":"start","Alias":"In Progress","Code":"711"},
+                {"Name":"in progress","Alias":"In Progress","Code":"711"},
+                {"Name":"todo","Alias":"In Progress","Code":"711"},
+                {"Name":"do","Alias":"In Progress","Code":"711"},
+                {"Name":"in review","Alias":"Resolved","Code":"5"},
+                {"Name":"resolve","Alias":"Resolved","Code":"5"},
+                {"Name":"resolved","Alias":"Resolved","Code":"5"},
+                {"Name":"closed","Alias":"Closed","Code":"701"},
+                {"Name":"close","Alias":"Closed","Code":"701"},
+                {"Name":"done","Alias":"Closed","Code":"701"}
             ]
         },
         {
