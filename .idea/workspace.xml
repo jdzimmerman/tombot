@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c94abd8-5cf1-4a69-a2f8-238232f40c9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/jira-list.coffee" afterPath="$PROJECT_DIR$/scripts/jira-list.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/projectData.json" afterPath="$PROJECT_DIR$/scripts/projectData.json" />
     </list>
     <ignored path="tombot.iws" />
@@ -79,7 +78,7 @@
       <file leaf-file-name="projectData.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.776699">
+            <state line="43" column="63" selection-start="2073" selection-end="2073" vertical-scroll-proportion="0.75242716">
               <folding />
             </state>
           </provider>
@@ -434,7 +433,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/projectData.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.776699">
+        <state line="43" column="63" selection-start="2073" selection-end="2073" vertical-scroll-proportion="0.75242716">
           <folding />
         </state>
       </provider>

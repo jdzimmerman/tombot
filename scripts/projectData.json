@@ -25,6 +25,26 @@
             ]
         },
         {
+            "Code":"mkt",
+            "Alias":"Marketing",
+            "Commands":[
+                {"Name":"started","Alias":"Started","Code":"11"},
+                {"Name":"start","Alias":"Started","Code":"11"},
+                {"Name":"in progress","Alias":"Started","Code":"11"},
+                {"Name":"code complete","Alias":"Finished","Code":"21"},
+                {"Name":"finish","Alias":"Finished","Code":"21"},
+                {"Name":"finished","Alias":"Finished","Code":"21"},
+                {"Name":"delivered","Alias":"Delivered","Code":"31"},
+                {"Name":"passed code review","Alias":"Delivered","Code":"31"},
+                {"Name":"deploy","Alias":"Delivered","Code":"41"},
+                {"Name":"deployed","Alias":"Accepted","Code":"41"},
+                {"Name":"accept","Alias":"Accepted","Code":"41"},
+                {"Name":"accepted","Alias":"Accepted","Code":"41"},
+                {"Name":"closed","Alias":"Accepted","Code":"41"},
+                {"Name":"close","Alias":"Accepted","Code":"41"}
+            ]
+        },
+        {
             "Code":"bo",
             "Alias":"Back Office",
             "Commands":[
