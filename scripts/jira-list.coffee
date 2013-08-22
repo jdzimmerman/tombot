@@ -45,14 +45,15 @@ module.exports = (robot) ->
   robot.hear /((show|list))? projects/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("op - Ops-New")
-    msg.send("com - Compiance")
-    msg.send("bo - Back Office")
     msg.send("ad - Admin")
-    msg.send("mkt - Marketing")
-    msg.send("uxui - UX/UI Team")
-    msg.send("meme - Meme Team")
-    msg.send("core - Core Transactional")
     msg.send("ap - App Team")
+    msg.send("bo - Back Office")
+    msg.send("com - Compiance")
+    msg.send("core - Core Transactional")
+    msg.send("meme - Meme Team")
+    msg.send("mkt - Marketing")
+    msg.send("sr - Site ReWrite")
+    msg.send("uxui - UX/UI Team")
 
   #**********************
   #Listing of all Jira Commands
