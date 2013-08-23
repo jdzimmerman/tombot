@@ -27,4 +27,4 @@ miley = [
 
 module.exports = (robot) ->
   robot.respond /miley me/i, (msg) ->
-    msg.reply msg.random infomercial
+    msg.reply msg.random miley
