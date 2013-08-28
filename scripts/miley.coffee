@@ -28,7 +28,7 @@ miley = [
   "http://s3-ec.buzzfed.com/static/enhanced/webdr06/2013/8/25/21/anigif_enhanced-buzz-17744-1377481570-27.gif",
   "http://31.media.tumblr.com/tumblr_m5fqjp3CUo1rs34ldo1_500.gif",
   "http://buzzworthy.mtv.com//wp-content/uploads/buzz/2012/11/miley-5.gif",
-  "http://25.media.tumblr.com/tumblr_m8rpn1uHPS1qec4gro1_500.gif".
+  "http://25.media.tumblr.com/tumblr_m8rpn1uHPS1qec4gro1_500.gif",
   "http://data.whicdn.com/images/49971933/tumblr_mgy362VblP1s22gz9o1_500_large.gif",
   "http://fc04.deviantart.net/fs71/f/2012/252/c/0/miley_cyrus__gif__by_lovecomesback-d5e5tkk.gif",
   "http://media.tumblr.com/tumblr_ma5uciRzjI1qkdght.gif"
