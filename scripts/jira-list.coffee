@@ -130,8 +130,11 @@ module.exports = (robot) ->
   # Deploy Command
   #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
-    username = msg.message.user.email
-    msg.send(JSON.stringify(username));
+    username = msg.message.user.id
+    msg.http("https://api.hipchat.com/v1/users/show?user_id=421827&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
+      .get() (err,res,body) ->
+        json = JSON.parse(body)
+        msg.send("User Email: "+json.email)
     path = '/rest/api/2/user/search?username='+username
     url = "https://" + domain + path
 
