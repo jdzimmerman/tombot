@@ -142,7 +142,7 @@ module.exports = (robot) ->
     msg.http(url)
       .get() (err, res, body) ->
         json = JSON.parse(body)
-        msg.send("Jira UserName: "+json.emailAddress)
+        msg.send("Jira UserName: "+JSON.stringify(body))
 
 
 
