@@ -130,19 +130,19 @@ module.exports = (robot) ->
   # Deploy Command
   #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
-    username = msg.message.user.id
+    userid = msg.message.user.id
     msg.send("User "+JSON.stringify(msg.message.user))
-    msg.http("https://api.hipchat.com/v1/users/show?user_id=421827&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
+    msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
-        msg.send("HIPCAHT: "+JSON.stringify(body))
-        msg.send("User Email: "+json.email)
-    path = '/rest/api/2/user/search?username='+username
+        msg.send("HipChat Email: "+json.email)
+    path = '/rest/api/2/user/search?username=ryan.sullivan@sendgrid.com'
     url = "https://" + domain + path
 
     msg.http(url)
       .get() (err, res, body) ->
         json = JSON.parse(body)
+        msg.send("Jira UserName: "+json.username)
 
 
 
