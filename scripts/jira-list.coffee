@@ -131,9 +131,11 @@ module.exports = (robot) ->
   #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
     username = msg.message.user.id
+    msg.send("User "+JSON.stringify(mes.message.user))
     msg.http("https://api.hipchat.com/v1/users/show?user_id=421827&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
+        msg.send("HIPCAHT: "+JSON.stringify(body))
         msg.send("User Email: "+json.email)
     path = '/rest/api/2/user/search?username='+username
     url = "https://" + domain + path
@@ -141,7 +143,7 @@ module.exports = (robot) ->
     msg.http(url)
       .get() (err, res, body) ->
         json = JSON.parse(body)
-        msg.send("UserName: "+json.username)
+
 
     msg.send("Creating Deploy: "+msg.match[1])
     data={"fields":{"project":{"key":"opreq"},"issueType":{"name":"Deploy"},"summary":msg.match[1]}, "reporter":{"email":"ryan.sullivan@sendgrid.com"}}
