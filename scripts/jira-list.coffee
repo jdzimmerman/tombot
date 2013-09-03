@@ -126,6 +126,33 @@ module.exports = (robot) ->
             console.log(err)
             msg.send("Error trying to move "+issue)
 
+  #*****************************
+  # Deploy Command
+  #*****************************
+  robot.hear /deploy (.*)/i, (msg) ->
+    username = msg.message.user
+    msg.send(JSON.stringify(username));
+    path = '/rest/api/2/user/search?username='+username
+    url = "https://" + domain + path
+
+    msg.http(url)
+      .get() (err, res, body) ->
+        json = JSON.parse(body)
+        msg.send("UserName: "+json.username)
+
+    msg.send("Creating Deploy: "+msg.match[1])
+    data={"fields":{"project":{"key":"opreq"},"issueType":{"name":"Deploy"},"summary":msg.match[1]}, "reporter":{"email":"ryan.sullivan@sendgrid.com"}}
+
+    msg.http(url)
+      .header('Content-Length', data.length)
+      .header('Content-Type', "application/json")
+      .auth(auth)
+      .post(JSON.stringify(data)) (err, res, body) ->
+        if err
+          console.log(err)
+          console.log(body+res)
+        else
+          msg.send("Succefully Created Deploy Issue")
 
   #*****************************
   # Comment Command
