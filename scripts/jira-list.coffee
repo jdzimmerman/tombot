@@ -140,9 +140,10 @@ module.exports = (robot) ->
     url = "https://" + domain + path
 
     msg.http(url)
+      .auth(auth)
       .get() (err, res, body) ->
         json = JSON.parse(body)
-        msg.send("Jira UserName: "+JSON.stringify(body))
+        msg.send("Jira UserName: "+body)
 
 
 
