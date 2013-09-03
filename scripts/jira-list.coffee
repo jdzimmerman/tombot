@@ -151,7 +151,7 @@ module.exports = (robot) ->
                   console.log(err)
                   console.log(body+res)
                 else
-                  msg.send("Succefully Created Deploy Issue: "+data)
+                  msg.send("Succefully Created Deploy Issue: "+JSON.stringify(data))
 
 
 
