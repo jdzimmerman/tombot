@@ -130,7 +130,7 @@ module.exports = (robot) ->
   # Deploy Command
   #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
-    username = msg.message.user
+    username = msg.message.user.email
     msg.send(JSON.stringify(username));
     path = '/rest/api/2/user/search?username='+username
     url = "https://" + domain + path
