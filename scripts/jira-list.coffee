@@ -145,19 +145,7 @@ module.exports = (robot) ->
         json = JSON.parse(body)
 
 
-    msg.send("Creating Deploy: "+msg.match[1])
-    data={"fields":{"project":{"key":"opreq"},"issueType":{"name":"Deploy"},"summary":msg.match[1]}, "reporter":{"email":"ryan.sullivan@sendgrid.com"}}
 
-    msg.http(url)
-      .header('Content-Length', data.length)
-      .header('Content-Type', "application/json")
-      .auth(auth)
-      .post(JSON.stringify(data)) (err, res, body) ->
-        if err
-          console.log(err)
-          console.log(body+res)
-        else
-          msg.send("Succefully Created Deploy Issue")
 
   #*****************************
   # Comment Command
