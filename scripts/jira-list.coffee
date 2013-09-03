@@ -128,22 +128,32 @@ module.exports = (robot) ->
 
   #*****************************
   # Deploy Command
-  #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
     userid = msg.message.user.id
-    msg.send("User "+JSON.stringify(msg.message.user))
     msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
-        msg.send("HipChat Email: "+json.user.email)
-    path = '/rest/api/2/user/search?username=ryan.sullivan@sendgrid.com'
-    url = "https://" + domain + path
+        path = '/rest/api/2/user/search?username=ryan.sullivan@sendgrid.com'
+        url = "https://" + domain + path
+        msg.http(url)
+          .auth(auth)
+          .get() (err, res, body) ->
+            json = JSON.parse(body)
+            msg.send("Jira UserName: "+json[0].username)
+            msg.send("Creating Deploy: "+msg.match[1])
+            data={"fields":{"project":{"key":"opreq"},"issueType":{"name":"Deploy"},"summary":msg.match[1], "reporter":{"name":json[0].username}}}
+            msg.http(url)
+              .header('Content-Length', data.length)
+              .header('Content-Type', "application/json")
+              .auth(auth)
+              .post(JSON.stringify(data)) (err, res, body) ->
+                if err
+                  console.log(err)
+                  console.log(body+res)
+                else
+                  msg.send("Succefully Created Deploy Issue")
 
-    msg.http(url)
-      .auth(auth)
-      .get() (err, res, body) ->
-        json = JSON.parse(body)
-        msg.send("Jira UserName: "+json[0].emailAddress)
+
 
 
 
