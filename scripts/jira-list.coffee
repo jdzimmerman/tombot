@@ -131,7 +131,7 @@ module.exports = (robot) ->
   #*****************************
   robot.hear /deploy (.*)/i, (msg) ->
     username = msg.message.user.id
-    msg.send("User "+JSON.stringify(mes.message.user))
+    msg.send("User "+JSON.stringify(msg.message.user))
     msg.http("https://api.hipchat.com/v1/users/show?user_id=421827&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
