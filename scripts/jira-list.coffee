@@ -139,7 +139,7 @@ module.exports = (robot) ->
           .auth(auth)
           .get() (err, res, body) ->
             json = JSON.parse(body)
-            data = {"fields":{"project":{"key":"OPREQ"},"summary":"test","issuetype":{"name":msg.match[1]},"reporter":{"name":json[0].name}}}
+            data = {"fields":{"project":{"key":"OPREQ"},"summary":msg.match[1],"issuetype":{"name":"Deploy"},"reporter":{"name":json[0].name}}}
             path = '/rest/api/2/issue/'
             url = "https://" + domain + path
             msg.send("DATA: "+JSON.stringify(data))
