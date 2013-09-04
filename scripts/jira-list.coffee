@@ -139,11 +139,10 @@ module.exports = (robot) ->
           .auth(auth)
           .get() (err, res, body) ->
             json = JSON.parse(body)
-            msg.send("Jira UserName: "+json[0].name)
-            msg.send("Creating Deploy: "+msg.match[1])
-            data={"fields":{"project":{"key":"opreq"},"issueType":{"name":"Deploy"},"summary":msg.match[1], "reporter":{"name":json[0].name}}}
+            data = {"fields":{"project":{"key":"OPREQ"},"summary":"test","issuetype":{"name":msg.match[1]},"reporter":{"name":json[0].name}}}
             path = '/rest/api/2/issue/'
             url = "https://" + domain + path
+            msg.send("DATA: "+data)
             msg.http(url)
               .header('Content-Length', data.length)
               .header('Content-Type', "application/json")
