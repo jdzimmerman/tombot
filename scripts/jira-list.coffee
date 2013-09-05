@@ -128,7 +128,7 @@ module.exports = (robot) ->
 
   #*****************************
   # Deploy Command
-  robot.hear /deploy (.*)/i, (msg) ->
+  robot.hear /deploy (-s|-summary) (.*) (-d|-description) (.*) (-l|-link) (.*)/i, (msg) ->
     userid = msg.message.user.id
     msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
@@ -139,7 +139,7 @@ module.exports = (robot) ->
           .auth(auth)
           .get() (err, res, body) ->
             json = JSON.parse(body)
-            data = {"fields":{"project":{"key":"OPREQ"},"summary":msg.match[1],"issuetype":{"name":"Deploy"},"reporter":{"name":json[0].name}}}
+            data = {"fields":{"project":{"key":"OPREQ"},"summary":msg.match[2],"description":msg.match[4],"issuetype":{"name":"Deploy"},"reporter":{"name":json[0].name}}}
             path = '/rest/api/2/issue/'
             url = "https://" + domain + path
             msg.send("DATA: "+JSON.stringify(data))
@@ -152,7 +152,21 @@ module.exports = (robot) ->
                   console.log(err)
                   console.log(body+res)
                 else
-                  msg.send("Succefully Created Deploy Issue: "+JSON.stringify(body))
+                  msg.send("Successfully Create Deploy Issue "+JSON.stringify(body))
+                  issueKey = JSON.parse(body).key
+                  data = {"type":{"id":"10003"},"inwardIssue":{"key": issueKey}, "outwardIssue":{"key": msg.match[6]}}
+                  path = '/rest/api/2/issueLink/'
+                  url = "https://" + domain + path
+                  msg.http(url)
+                    .header('Content-Length', data.length)
+                    .header('Content-Type', "application/json")
+                    .auth(auth)
+                    .post(JSON.stringify(data)) (err, res, body) ->
+                      if err
+                        console.log(err)
+                        console.log(body+res)
+                      else
+                        msg.send("Successfully Create Deploy Issue "+JSON.stringify(body))
 
 
 
