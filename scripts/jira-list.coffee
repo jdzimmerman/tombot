@@ -59,7 +59,7 @@ module.exports = (robot) ->
   #Listing of all Jira Commands
   #**********************
   robot.hear /jira ((commands|help))/i, (msg) ->
-    msg.send("/code show|list projects                         #list all available jira projects\nshow|list <projectKey> issues <status>     #list all issues from the selected project with the selected status\nshow|list all issues <status>              #list all issues from all projects with the selected status\n<jiraTicketNumber> Comment <comment>       #add a comment to the issue selected\nmove <jiraTicketNumber> to <status>        #moves the jira ticket to the new status (Many statuses work)")
+    msg.send("/code show|list projects                         #list all available jira projects\nshow|list <projectKey> issues <status>     #list all issues from the selected project with the selected status\nshow|list all issues <status>              #list all issues from all projects with the selected status\n<jiraTicketNumber> Comment <comment>       #add a comment to the issue selected\nmove <jiraTicketNumber> to <status>        #moves the jira ticket to the new status (Many statuses work)\nDeploy -s|-summary <summary> -d|-description <description> -l|-link <Jira Number>    #Creates a new Deploy jira issue in the OPREQ project\n")
 
   #*****************************
   # Move Command
@@ -126,6 +126,51 @@ module.exports = (robot) ->
           else
             console.log(err)
             msg.send("Error trying to move "+issue)
+
+  #*****************************
+  # Deploy Command
+  robot.hear /deploy (-s|-summary) (.*) (-d|-description) (.*) (-l|-link) (.*)/i, (msg) ->
+    userid = msg.message.user.id
+    msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
+      .get() (err,res,body) ->
+        json = JSON.parse(body)
+        path = '/rest/api/2/user/search?username=ryan.sullivan@sendgrid.com'
+        url = "https://" + domain + path
+        msg.http(url)
+          .auth(auth)
+          .get() (err, res, body) ->
+            json = JSON.parse(body)
+            data = {"fields":{"project":{"key":"OPREQ"},"summary":msg.match[2],"description":msg.match[4],"issuetype":{"name":"Deploy"},"reporter":{"name":json[0].name}}}
+            path = '/rest/api/2/issue/'
+            url = "https://" + domain + path
+            msg.send("DATA: "+JSON.stringify(data))
+            msg.http(url)
+              .header('Content-Length', data.length)
+              .header('Content-Type', "application/json")
+              .auth(auth)
+              .post(JSON.stringify(data)) (err, res, body) ->
+                if err
+                  console.log(err)
+                  console.log(body+res)
+                else
+                  issueKey = JSON.parse(body).key
+                  data = {"type":{"id":"10003"},"inwardIssue":{"key": issueKey}, "outwardIssue":{"key": msg.match[6]}}
+                  path = '/rest/api/2/issueLink/'
+                  url = "https://" + domain + path
+                  msg.http(url)
+                    .header('Content-Length', data.length)
+                    .header('Content-Type', "application/json")
+                    .auth(auth)
+                    .post(JSON.stringify(data)) (err, res, body) ->
+                      if err
+                        console.log(err)
+                        console.log(body+res)
+                      else
+                        msg.send("Successfully Created Deploy Issue "+issueKey)
+
+
+
+
 
 
   #*****************************
