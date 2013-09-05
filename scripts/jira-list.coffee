@@ -58,7 +58,7 @@ module.exports = (robot) ->
   #Listing of all Jira Commands
   #**********************
   robot.hear /jira ((commands|help))/i, (msg) ->
-    msg.send("/code show|list projects                         #list all available jira projects\nshow|list <projectKey> issues <status>     #list all issues from the selected project with the selected status\nshow|list all issues <status>              #list all issues from all projects with the selected status\n<jiraTicketNumber> Comment <comment>       #add a comment to the issue selected\nmove <jiraTicketNumber> to <status>        #moves the jira ticket to the new status (Many statuses work)")
+    msg.send("/code show|list projects                         #list all available jira projects\nshow|list <projectKey> issues <status>     #list all issues from the selected project with the selected status\nshow|list all issues <status>              #list all issues from all projects with the selected status\n<jiraTicketNumber> Comment <comment>       #add a comment to the issue selected\nmove <jiraTicketNumber> to <status>        #moves the jira ticket to the new status (Many statuses work)\nDeploy -s|-summary <summary> -d|-description <description> -l|-link <Jira Number>    #Creates a new Deploy jira issue in the OPREQ project\n")
 
   #*****************************
   # Move Command
@@ -152,7 +152,6 @@ module.exports = (robot) ->
                   console.log(err)
                   console.log(body+res)
                 else
-                  msg.send("Successfully Create Deploy Issue "+JSON.stringify(body))
                   issueKey = JSON.parse(body).key
                   data = {"type":{"id":"10003"},"inwardIssue":{"key": issueKey}, "outwardIssue":{"key": msg.match[6]}}
                   path = '/rest/api/2/issueLink/'
@@ -166,7 +165,7 @@ module.exports = (robot) ->
                         console.log(err)
                         console.log(body+res)
                       else
-                        msg.send("Successfully Create Deploy Issue "+JSON.stringify(body))
+                        msg.send("Successfully Created Deploy Issue "+issueKey)
 
 
 
