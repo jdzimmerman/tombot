@@ -1,5 +1,5 @@
 # Description:
-#   Because animals are animals.
+#   Random string
 #
 # Dependencies:
 #   "htmlparser": "1.7.6"
@@ -9,22 +9,19 @@
 #   None
 #
 # Commands:
-#   hubot animal me - Grab a random gif from http://animalsbeingdicks.com/
+#   random me - generates random alphaNumeric string with a length of 20 characters
 #
 # Author:
-#   unsay
+#   tomszymanski
 
-Select     = require("soupselect").select
-HtmlParser = require "htmlparser"
+# Select     = require("soupselect").select
+# HtmlParser = require "htmlparser"
 
-module.exports = (robot) ->
-  robot.respond /random me/i, (msg) ->
+# module.exports = (robot) ->
+#   robot.respond /random me/i, (msg) ->
+#   msg.robot.http("http://www.sethcardoza.com/api/rest/tools/random_password_generator/type:json/length:20/complexity:alphaNumeric")
+#     .get() (error, response, body)->
+
+#   send JSON.parse(body).password
+
   
-  msg.http("http://www.sethcardoza.com/api/rest/tools/random_password_generator/length:20/complexity:alphaNumeric")
-    .get() (err, res, body) ->
-      handler = new HtmlParser.DefaultHandler()
-      parser  = new HtmlParser.Parser handler
-
-      string = parser.parseComplete body
-
-  msg.send string
