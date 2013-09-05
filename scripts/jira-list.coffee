@@ -142,7 +142,6 @@ module.exports = (robot) ->
             data = {"fields":{"project":{"key":"OPREQ"},"summary":msg.match[2],"description":msg.match[4],"issuetype":{"name":"Deploy"},"reporter":{"name":json[0].name}}}
             path = '/rest/api/2/issue/'
             url = "https://" + domain + path
-            msg.send("DATA: "+JSON.stringify(data))
             msg.http(url)
               .header('Content-Length', data.length)
               .header('Content-Type', "application/json")
