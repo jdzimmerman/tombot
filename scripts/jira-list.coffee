@@ -42,7 +42,7 @@ module.exports = (robot) ->
   #**********************
   #Listing of all projects
   #**********************=
-  robot.hear /((show|list))? projects/i, (msg) ->
+  robot.hear /(show|list) projects/i, (msg) ->
     msg.send("opreq - Ops Requests")
     msg.send("op - Ops-New")
     msg.send("ad - Admin")
@@ -129,12 +129,12 @@ module.exports = (robot) ->
 
   #*****************************
   # Deploy Command
-  robot.hear /deploy (-s|-summary) (.*) (-d|-description) (.*) (-l|-link) (.*)/i, (msg) ->
+  robot.respond /deploy (-s|-summary) (.*) (-d|-description) (.*) (-l|-link) (.*)/i, (msg) ->
     userid = msg.message.user.id
     msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
-        path = '/rest/api/2/user/search?username=ryan.sullivan@sendgrid.com'
+        path = '/rest/api/2/user/search?username='+json.user.email
         url = "https://" + domain + path
         msg.http(url)
           .auth(auth)
