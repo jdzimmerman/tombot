@@ -35,6 +35,7 @@ password or="s3ndgr1d"
 domain = process.env.HUBOT_JIRA_DOMAIN
 domain or="jira.sendgrid.net"
 auth = "#{username}:#{password}"
+auth_token = "74a5d987aa99a62fa62f0ed41c7a22"
 
 
 module.exports = (robot) ->
@@ -131,10 +132,9 @@ module.exports = (robot) ->
   # Deploy Command
   robot.respond /deploy (-s|-summary) (.*) (-d|-description) (.*) (-l|-link) (.*)/i, (msg) ->
     userid = msg.message.user.id
-    msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
+    msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token="+auth_token)
       .get() (err,res,body) ->
         json = JSON.parse(body)
-        console.log("USER: "+JSON.stringify(json));
         path = '/rest/api/2/user/search?username='+json.user.email
         url = "https://" + domain + path
         msg.http(url)
