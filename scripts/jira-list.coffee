@@ -134,6 +134,7 @@ module.exports = (robot) ->
     msg.http("https://api.hipchat.com/v1/users/show?user_id="+userid+"&format=json&auth_token=09d7f55d7da159faae36d9a14b1a0e")
       .get() (err,res,body) ->
         json = JSON.parse(body)
+        console.log("USER: "+JSON.stringify(json));
         path = '/rest/api/2/user/search?username='+json.user.email
         url = "https://" + domain + path
         msg.http(url)
