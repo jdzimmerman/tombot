@@ -45,7 +45,7 @@ dawson = {
   "goatface" : "http://media.tumblr.com/tumblr_lgbivmS2zi1qf8yek.gif",
   "kissass" : "http://media.tumblr.com/tumblr_leutcknjcE1qf8yek.gif",
   "cabbagepatch" : "http://media.tumblr.com/tumblr_leut7h1jX61qf8yek.gif",
-  "jvb" : "http://media.tumblr.com/tumblr_leut7h1jX61qf8yek.gif",
+  "jvb" : "http://media.tumblr.com/tumblr_leutggyfu01qf8yek.gif",
   "goodone" : "http://media.tumblr.com/tumblr_leut89oTFl1qf8yek.gif",
   "hifive" : "http://media.tumblr.com/tumblr_leut3zxRZZ1qf8yek.gif",
   "dramatic" : "http://media.tumblr.com/tumblr_lefszqdQgZ1qf8yek.gif",
