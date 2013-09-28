@@ -48,4 +48,5 @@ dawson = {
 module.exports = (robot) ->
   robot.hear /(.+) dawson/i, (msg) ->
     type = msg.match[1]
-    msg.reply dawson[type]
+    img = dawson[type]
+    msg.reply img
