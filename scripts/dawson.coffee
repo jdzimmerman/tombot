@@ -46,7 +46,7 @@ dawson = {
 }
 
 module.exports = (robot) ->
-  robot.hear /(.+) dawson/i, (msg) ->
+  robot.hear /dawson me (.+)/i, (msg) ->
     type = msg.match[1]
     img = dawson[type]
     msg.reply img
