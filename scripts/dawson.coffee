@@ -12,7 +12,7 @@
 #
 # Author:
 #   tomszymanski
-dawson = 
+dawson = {
   "nerdy" : "http://media.tumblr.com/tumblr_lgbiutS7Go1qf8yek.gif",
   "sleepy" : "http://media.tumblr.com/tumblr_lgbith0wC61qf8yek.gif",
   "eyebrow" : "http://media.tumblr.com/tumblr_lgbisdjUUm1qf8yek.gif",
@@ -43,7 +43,9 @@ dawson =
   "nopictures" : "http://media.tumblr.com/tumblr_lgbiy9ygKI1qf8yek.gif",
   "homealone" : "http://media.tumblr.com/tumblr_lgbiwvsY8K1qf8yek.gif",
   "goatface" : "http://media.tumblr.com/tumblr_lgbivmS2zi1qf8yek.gif"
+}
 
 module.exports = (robot) ->
   robot.hear /(.+) dawson/i, (msg) ->
-    msg.reply dawson[msg.match[1]]
+    type = msg.match[1]
+    msg.reply dawson[type]
