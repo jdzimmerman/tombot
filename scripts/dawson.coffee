@@ -25,4 +25,4 @@ dawson = {
 
 module.exports = (robot) ->
   robot.hear /(.*) dawson/i, (msg) ->
-    msg.reply dawson.msg.match[1]
+    msg.reply dawson[msg.match[1]]
