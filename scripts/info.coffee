@@ -1,3 +1,17 @@
+# Description:
+#   Infomercials
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   info me
+#
+# Author:
+#   tomszymanski
 infomercial = [
   "http://i.imgur.com/InuUEBT.gif",
   "http://i.imgur.com/3bglyBB.gif",
