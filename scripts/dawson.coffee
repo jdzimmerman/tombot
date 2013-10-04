@@ -83,7 +83,7 @@ module.exports = (robot) ->
     msg.reply img
 
   robot.hear /dawson help/i, (msg) ->
-    list = "/quote"
+    list = "/quote example : dawson me wink \nList of all commands:\n"
     for key,value of dawson
       list += " " + key
     msg.send list
