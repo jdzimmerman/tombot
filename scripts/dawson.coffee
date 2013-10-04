@@ -47,12 +47,13 @@ dawson = {
   "married" : "http://media.tumblr.com/tumblr_lgbjc0j72L1qf8yek.gif",
   "nanabooboo" : "http://media.tumblr.com/tumblr_left25CWUw1qf8yek.gif",
   "nausea" : "http://media.tumblr.com/tumblr_left5jMLUR1qf8yek.gif",
+  "nerdy" : "http://media.tumblr.com/tumblr_lgbiutS7Go1qf8yek.gif",
   "nopictures" : "http://media.tumblr.com/tumblr_lgbiy9ygKI1qf8yek.gif",
   "nostalgic" : "http://media.tumblr.com/tumblr_leftg4TrH31qf8yek.gif",
   "noyoudidnt" : "http://media.tumblr.com/tumblr_lefsxcQzPx1qf8yek.gif",
   "oface" : "http://media.tumblr.com/tumblr_lefsm8qaqm1qf8yek.gif",
   "otp" : "http://media.tumblr.com/tumblr_lgbj1gOtSX1qf8yek.gif",
-  "panic" : "http://media.tumblr.com/tumblr_lefsueW2Lp1qf8yek.gif"
+  "panic" : "http://media.tumblr.com/tumblr_lefsueW2Lp1qf8yek.gif",
   "sad" : "http://media.tumblr.com/tumblr_leftdzYz3Q1qf8yek.gif",
   "sexy" : "http://media.tumblr.com/tumblr_lem8nxTzE01qf8yek.gif",
   "sleepy" : "http://media.tumblr.com/tumblr_lgbith0wC61qf8yek.gif",
@@ -71,8 +72,7 @@ dawson = {
   "wig" : "http://media.tumblr.com/tumblr_lgbjekshoV1qf8yek.gif",
   "wink" : "http://media.tumblr.com/tumblr_lefthfdef11qf8yek.gif",
   "yawn" : "http://media.tumblr.com/tumblr_lefti4hz161qf8yek.gif",
-  "yikes" : "http://media.tumblr.com/tumblr_lefsyv8JF91qf8yek.gif",
-  "nerdy" : "http://media.tumblr.com/tumblr_lgbiutS7Go1qf8yek.gif",
+  "yikes" : "http://media.tumblr.com/tumblr_lefsyv8JF91qf8yek.gif"
 }
 
 module.exports = (robot) ->
