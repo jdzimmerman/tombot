@@ -9,6 +9,7 @@
 #
 # Commands:
 #   _blank_ dawson
+#   dawson help : for a list of options
 #
 # Author:
 #   tomszymanski
