@@ -80,3 +80,9 @@ module.exports = (robot) ->
     type = msg.match[1]
     img = dawson[type]
     msg.reply img
+
+  robot.hear /dawson help/i, (msg) ->
+    list = "/quote"
+    for key,value of dawson
+      list += " " + key
+    msg.send list
