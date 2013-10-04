@@ -1,0 +1,4 @@
+deploy:
+  provider: heroku
+  app: tombot
+  api_key: "bc5f9ddb2b95dc7e5a0bca0f3fe13b3524b8f98e"
