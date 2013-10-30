@@ -50,7 +50,8 @@ wtfs = [
 	'http://www.reactiongifs.com/wp-content/uploads/2013/02/what-in-the.gif',
 	'http://30.media.tumblr.com/tumblr_lujcm8Ee3G1qhpehmo3_500.gif',
 	'http://media.tumblr.com/tumblr_lnlv6gcMDe1qgh2x0.gif',
-	'http://24.media.tumblr.com/d9777074a9c2e3c31d69ac8543642aca/tumblr_mphtf6psnn1rzianao1_500.gif'
+	'http://24.media.tumblr.com/d9777074a9c2e3c31d69ac8543642aca/tumblr_mphtf6psnn1rzianao1_500.gif',
+	'http://media-cache-ak0.pinimg.com/736x/eb/82/95/eb829582b8bca3551e0cdd3b1bf7543f.jpg'
 ]
 
 module.exports = (robot) ->
