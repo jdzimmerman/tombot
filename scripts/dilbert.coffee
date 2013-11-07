@@ -13,23 +13,17 @@
 # Author:
 #   evilmarty
 
-htmlparser = require "htmlparser"
+cheerio = require('cheerio')
 
 module.exports = (robot) ->
   robot.respond /((show|fetch)( me )?)?dilbert/i, (msg) ->
-    dilbertRss msg, (url) ->
-      msg.send url
+    dilbert(msg)
 
-dilbertRegexp = /src=&quot;(.*.gif)/i
-dilbertRss = (msg, cb) ->
-  msg.http('http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss')
+dilbert = (msg) ->
+  msg.robot.http('http://rss.latunyi.com/dilbert/dilbert.php')
     .get() (err, resp, body) ->
-      handler = new htmlparser.RssHandler (error, dom) ->
-        return if error || !dom
-        item = dom.items[0]
-        match = item.description.match(dilbertRegexp)
-        cb match[1] if match
+      msg.send get_dilbert body
 
-      parser = new htmlparser.Parser(handler)
-      parser.parseComplete(body)
-      
+get_dilbert = (body) ->
+  $ = cheerio.load(body.replace(/<!\[CDATA\[([^\]]+)]\]>/ig, "$1"),{ ignoreWhitespace : true, xmlMode : true});
+  $('items').text()
