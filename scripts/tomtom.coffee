@@ -21,5 +21,5 @@ tom = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /@tomahawk/i, (msg) ->
+  robot.hear /tomothy/i, (msg) ->
     msg.send msg.random tom
