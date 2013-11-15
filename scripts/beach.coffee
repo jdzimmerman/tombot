@@ -21,7 +21,6 @@ beachs = [
 	"http://windsormedia.blogs.com/.a/6a00d8341c011b53ef016303ace2ee970d-800wi",
 	"http://www.thechicagoegotist.com/sites/www.thechicagoegotist.com/files/images/111304_winsome_35x18_v8_cropped_72.preview.jpg",
 	"http://www.thechicagoegotist.com/sites/www.thechicagoegotist.com/files/images/111312_lifelime_20x50_v2_cropped_72.preview.jpg",
-	"http://www.margaritashack.com/TinyMCE/thumbnail.ashx?src=%2Fcontent%2F163194%2FCorona_Cantina.jpg&size=250",
 	"http://behance.vo.llnwd.net/profiles7/1865585/projects/6781181/fb60b7d985fe67f159fb6baf275af54e.jpg",
 	"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTE2GRQKPmUA4InLJiWzNtXaYKiyIj7OVWSuRNGOb5kmPY1JWocFA",
 	"http://b.vimeocdn.com/ts/448/565/448565726_640.jpg",
