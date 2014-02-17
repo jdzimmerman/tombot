@@ -46,12 +46,28 @@ HipchatClient = require('hipchat-client')
 crypto = require('crypto')
 HipChat = new HipchatClient(process.env.HIPCHAT_TOKEN)
 
+# make sure the email is a string and not blank
+validEmail = (email) ->
+  return false if typeof email isnt "string"
+  return false if not email? or email is ''
+  true
 
 module.exports = (robot) ->
+  # list tipbot commands
+  robot.hear /tipbot commands/i, (msg) ->
+    commands = "tipbot register \n" +
+               "tipbot address \n" +
+               "tipbot balance \n" +
+               "tipbot history \n" +
+               "tipbot tip @mentionName amount \n" +
+               "tipbot withdraw personalAddress"
+    msg.send commands
+
   # register with tipbot
   robot.hear /tipbot register/i, (msg) ->
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
       console.log "#{from_hash} is registering"
       msg.http("#{process.env.TIPBOT_URL}/wallet/#{from_hash}/register")
@@ -67,6 +83,7 @@ module.exports = (robot) ->
   robot.hear /tipbot address/i, (msg) ->
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
       msg.http("#{process.env.TIPBOT_URL}/wallet/#{from_hash}")
         .headers(Authorization: process.env.TIPBOT_AUTH_TOKEN, Accept: 'application/json')
@@ -79,6 +96,7 @@ module.exports = (robot) ->
   robot.hear /tipbot balance/i, (msg) ->
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
       msg.http("#{process.env.TIPBOT_URL}/wallet/#{from_hash}/balance")
         .headers(Authorization: process.env.TIPBOT_AUTH_TOKEN, Accept: 'application/json')
@@ -91,6 +109,7 @@ module.exports = (robot) ->
   robot.hear /tipbot history/i, (msg) ->
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
       msg.http("#{process.env.TIPBOT_URL}/wallet/#{from_hash}/history")
         .headers(Authorization: process.env.TIPBOT_AUTH_TOKEN, Accept: 'application/json')
@@ -106,9 +125,11 @@ module.exports = (robot) ->
 
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
 
       HipChat.getMailByMentionName to_name.substring(1), (email) ->
+        return msg.send("Error") unless validEmail(email)
         to_hash = crypto.createHash('md5').update(email).digest('hex')
         console.log from_hash
         console.log "tipping #{to_hash}"
@@ -119,7 +140,7 @@ module.exports = (robot) ->
           .post(data) (err, res, body) ->
             object = JSON.parse(body)
             console.log object
-            msg.send "Tip sent!"
+            msg.send "Tip sent! Such kind shibe."
 
   # withdraw coins to personal wallet
   robot.hear /tipbot withdraw (.*)/i, (msg) ->
@@ -128,6 +149,7 @@ module.exports = (robot) ->
 
     HipChat.getMailByMentionName msg.message.user.mention_name, (email) ->
       console.log email
+      return msg.send("Error") unless validEmail(email)
       from_hash = crypto.createHash('md5').update(email).digest('hex')
       msg.http("#{process.env.TIPBOT_URL}/wallet/#{from_hash}/withdraw/#{wallet_address}")
         .headers(Authorization: process.env.TIPBOT_AUTH_TOKEN, Accept: 'application/json')
