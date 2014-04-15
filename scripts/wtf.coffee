@@ -55,7 +55,8 @@ wtfs = [
 	'http://i.imgur.com/EvgAZGi.gif',
 	'http://i.imgur.com/OCxsfnh.gif',
 	'http://i.imgur.com/DYoyPI0.gif',
-	'http://i.imgur.com/gRGeyxs.gif'
+	'http://i.imgur.com/gRGeyxs.gif',
+	'http://i21.photobucket.com/albums/b264/charmedrules/Random/1232904154_dramaticlemur.gif'
 ]
 
 module.exports = (robot) ->
