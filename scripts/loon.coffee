@@ -41,6 +41,6 @@ loonCalls = [
 
 
 module.exports = (robot) ->
-  robot.hear /loon( me)?/i, (msg) ->
+  robot.hear /loon me/i, (msg) ->
     msg.send msg.random loonImages
     msg.send "\u25B6 " + msg.random loonCalls
