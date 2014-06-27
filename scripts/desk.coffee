@@ -1,10 +1,10 @@
 module.exports = (robot) ->
-  robot.respond /down$/i, (msg) ->
+  robot.respond /lower$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "d"
     
-    ms = 3000
+    ms = 8000
     params = params.concat(ms)
 
     command = "curl https://api.spark.io/v1/devices/53ff74065075535146321387/"
@@ -15,12 +15,12 @@ module.exports = (robot) ->
     @exec command, (error, stdout, stderr) ->
       msg.send stdout
 
-  robot.respond /down$/i, (msg) ->
+  robot.respond /raise$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "u"
     
-    ms = 3000
+    ms = 8000
     params = params.concat(ms)
 
     command = "curl https://api.spark.io/v1/devices/53ff74065075535146321387/"
