@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.respond /sit down$/i, (msg) ->
+  robot.respond /down$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "d"
@@ -15,7 +15,7 @@ module.exports = (robot) ->
     @exec command, (error, stdout, stderr) ->
       msg.send stdout
 
-  robot.respond /stand up$/i, (msg) ->
+  robot.respond /down$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "u"
