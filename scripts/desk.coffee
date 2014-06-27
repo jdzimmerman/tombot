@@ -1,14 +1,5 @@
-# Description:
-#   Utility commands surrounding Hubot uptime.
-#
-# Commands:
-#   hubot ping - Reply with pong
-#   hubot echo <text> - Reply back with <text>
-#   hubot time - Reply with current time
-#   hubot die - End hubot process
-
 module.exports = (robot) ->
-  robot.respond /lower$/i, (msg) ->
+  robot.respond /sit down$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "d"
@@ -24,7 +15,7 @@ module.exports = (robot) ->
     @exec command, (error, stdout, stderr) ->
       msg.send stdout
 
-  robot.respond /raise$/i, (msg) ->
+  robot.respond /stand up$/i, (msg) ->
     @exec = require('child_process').exec
 
     params = "u"
