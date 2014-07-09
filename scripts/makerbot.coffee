@@ -1,47 +1,54 @@
 # Description
 #   Maintains a really simple queue for the Denver makerbot.
+#	Could be used for other queuing systems.
 #
 # Dependencies:
-#   
+#
 #
 # Configuration:
-#   
+#
 #
 # Commands:
-#   hubot queue me => adds user to queue
-#  	hubot remove me => removes user from queue
-#   hubot show queue => shows entire queue
-#	hubot clear list => clears entire list
-#	hubot remove <user> => attempts to remove <user> from queue.
+#   makerbot queue me => adds you to queue
+# 	makerbot add me => same as 'makerbot queue me'
+#  	makerbot remove me => removes user from queue
+#   makerbot show queue => shows entire queue
+#	makerbot clear queue => clears entire list
+#	makerbot remove <user> => attempts to remove <user> from queue.
 #
 # Author:
 #   jhloa2
 
-queue = []
+
+makerbot_queue = []
 
 module.exports = (robot)->
-	robot.respond /queue( me)/i, (msg)->
+	robot.hear /makerbot (queue|add)( me)/i, (msg)->
 		user = msg.message.user.name
 		date = new Date
-		queue.push {user: user, date: date}
-		msg.send "Successfully added user " + user + " to queue!"
+		makerbot_queue.push {user: user, date: date}
+		msg.send "Successfully added user " + user + " to makerbot queue!"
 
-	robot.respond /show queue/i, (msg)->
+	robot.hear /makerbot show queue/i, (msg)->
 		position = 1
-		for item in queue
+		if makerbot_queue.length == 0
+			msg.send "No queue!"
+
+		for item in makerbot_queue
 			msg.send "Position: " + position.toString() + ", User: " + item['user'] + ", Time: " + item['date']
 			position += 1
 
-	robot.respond /remove( me)/i, (msg)->
+	robot.hear /makerbot remove( me)/i, (msg)->
 		user = msg.message.user.name
-		queue = (x for x in queue when x['user'] != user)
-		msg.send "Attempted to remove " + user + " from queue."
+		makerbot_queue = (x for x in makerbot_queue when x['user'] != user)
+		msg.send "Attempted to remove " + user + " from makerbot queue."
 
-	robot.respond /clear list/i, (msg)->
-		queue = []
-		msg.send "Hope you meant to do that because queue is cleared!"
+	robot.hear /makerbot clear queue/i, (msg)->
+		makerbot_queue = []
+		msg.send "Hope you meant to do that because makerbot queue is cleared!"
 
-	robot.respond /remove (.*)/i, (msg)->
+	robot.hear /makerbot remove (.*)/i, (msg)->
 		user = msg.match[1]
-		queue = (x for x in queue when x['user'] != user)
-		msg.send "Attempted to remove " + user + " from queue."
+		if user != "me"
+			makerbot_queue = (x for x in makerbot_queue when x['user'] != user)
+			msg.send "Attempted to remove " + user + " from makerbot queue."
