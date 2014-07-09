@@ -47,6 +47,8 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         object = JSON.parse(body)
         kegs = object.objects
+        # Sort by beverage name
+        kegs = kegs.sort (a,b) -> a.beverage.name.localeCompare(b.beverage.name)
         for keg in kegs
           msg.send formatKegHeader(keg)
 
@@ -70,6 +72,8 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         object = JSON.parse(body)
         taps = object.objects
+        # Sort by sort order
+        taps = taps.sort (a,b) -> a.sort_order - b.sort_order
         for tap in taps
           msg.send formatTapHeader(tap)
 
