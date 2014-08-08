@@ -1,12 +1,12 @@
 # Description
-#   Maintains a really simple queue for the Denver makerbot.
+#   Maintains a really simple queue for the Denver makerbot. 
 #	Could be used for other queuing systems.
 #
 # Dependencies:
-#
+#   
 #
 # Configuration:
-#
+#   
 #
 # Commands:
 #   makerbot queue me => adds you to queue
@@ -15,6 +15,7 @@
 #   makerbot show queue => shows entire queue
 #	makerbot clear queue => clears entire list
 #	makerbot remove <user> => attempts to remove <user> from queue.
+#	makerbot add <user> => attempts to add <user> to queue.
 #
 # Author:
 #   jhloa2
@@ -46,6 +47,13 @@ module.exports = (robot)->
 	robot.hear /makerbot clear queue/i, (msg)->
 		makerbot_queue = []
 		msg.send "Hope you meant to do that because makerbot queue is cleared!"
+
+	robot.hear /makerbot add (.*)/i, (msg)->
+		user = msg.match[1]
+		date = new Date
+		if user != "me"
+			makerbot_queue.push {user: user, date: date}
+			msg.send "Attempted to add " + user + " from makerbot queue."
 
 	robot.hear /makerbot remove (.*)/i, (msg)->
 		user = msg.match[1]
