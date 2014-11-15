@@ -1,5 +1,5 @@
 #Description
-#   Parse some RSS feeds and see 
+#   Parse some RSS feeds and see when the last post was.
 #   Intended to be used for individual author feeds.
 #
 # Dependencies:
