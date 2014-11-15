@@ -7,7 +7,7 @@
 #   "async": "~0.9.0"
 #
 # Commands:
-#   hubot blog set <url> - register an RSS feed you would like to check
+#   hubot blog set <url> - register an RSS feed for yourself
 #   hubot blog set <name> <url> - register an RSS feed for someone else
 #   hubot blog me - see the last time you published a post
 #   hubot blog show <name> - see the last time <name> published a post
