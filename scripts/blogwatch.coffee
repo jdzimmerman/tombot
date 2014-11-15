@@ -10,6 +10,7 @@
 #   hubot blog set <url> - register an RSS feed you would like to check
 #   hubot blog set <name> <url> - register an RSS feed for someone else
 #   hubot blog me - see the last time you published a post
+#   hubot blog show <name> - see the last time <name> published a post
 #   hubot blog status - see status all registered RSS feeds
 #   hubot blog next - see who is due to write the next post
 #
@@ -20,13 +21,6 @@ async = require("async")
 moment = require("moment")
 
 module.exports = (robot) ->
-  robot.brain.userForId("2", {
-                    name: "Yamil Asusta",
-                    room: "testing",
-                    blogFeedUrl: "https://sendgrid.com/blog/author/yamil/feed/",
-                    mention_name: "brah"
-                });
-
   #blog me
   robot.respond /blog me?(.+)?/i, (msg) ->
     user = robot.brain.userForId(msg.message.user.id)
@@ -39,8 +33,24 @@ module.exports = (robot) ->
     else
       msg.reply "What's your feed address? Use @bot blog set <url>"
 
+  #blog show <name>
+  robot.respond /blog show\s+([\w .\-]+)/i, (msg) ->
+    name = msg.match[1].trim()
+    users = robot.brain.usersForFuzzyName(name)
+
+    if users.length is 1
+      user = users[0]
+      if user.blogFeedUrl
+        loadRSSFeed msg, user.blogFeedUrl, (err,result) ->
+          if err
+            msg.reply "There was a problem loading the feed (#{user.blogFeedUrl})."
+          else
+            msg.reply "#{user.name} published on " + moment(result.date).format("MMMM Do YYYY") + ", " + moment(result.date).fromNow() + "."
+    else
+      msg.reply "Sorry, I'm not sure who #{name} is."
+  
   #blog status
-  robot.respond /blog status?(.+)?/i, (msg) ->    
+  robot.respond /blog status?/i, (msg) ->    
     output = new Array
     
     loadAllFeeds robot, (err, results) ->
