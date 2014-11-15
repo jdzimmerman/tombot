@@ -1,5 +1,5 @@
 #Description
-#   Parse some RSS feeds and see when the last post was.
+#   Parse some RSS feeds and show who is up next for to write a blog post.
 #   Intended to be used for individual author feeds.
 #
 # Dependencies:
@@ -20,15 +20,26 @@ async = require("async")
 moment = require("moment")
 
 module.exports = (robot) ->
+  robot.brain.userForId("2", {
+                    name: "Yamil Asusta",
+                    room: "testing",
+                    blogFeedUrl: "https://sendgrid.com/blog/author/yamil/feed/",
+                    mention_name: "brah"
+                });
+
+  #blog me
   robot.respond /blog me?(.+)?/i, (msg) ->
     user = robot.brain.userForId(msg.message.user.id)
     if user.blogFeedUrl
-      msg.reply "Checking " + user.blogFeedUrl
-      loadRSSFeed msg, user.blogFeedUrl, (result) ->
-          msg.reply "Last published on " + moment(result.date).format("MMMM Do YYYY") + ", " + moment(result.date).fromNow() + "."
+      loadRSSFeed msg, user.blogFeedUrl, (err,result) ->
+          if err
+            msg.reply "There was a problem loading the feed (#{user.blogFeedUrl})."
+          else
+            msg.reply "Last published on " + moment(result.date).format("MMMM Do YYYY") + ", " + moment(result.date).fromNow() + "."
     else
       msg.reply "What's your feed address? Use @bot blog set <url>"
 
+  #blog status
   robot.respond /blog status?(.+)?/i, (msg) ->    
     output = new Array
     
@@ -38,6 +49,7 @@ module.exports = (robot) ->
     
       msg.send output.join("\n")
     
+  #blog next
   robot.respond /blog next?(.+)?/i, (msg) ->
     loadAllFeeds robot, (err, results) ->
       result = results[0]
@@ -51,11 +63,13 @@ module.exports = (robot) ->
       else
         msg.send "Next up for a blog post is #{name}!"
 
+  #blog set <url>
   robot.respond /blog set\s+(https?:\/\/[^\s]+)/i, (msg) ->
     user = robot.brain.userForId(msg.message.user.id)
     user.blogFeedUrl = msg.match[1].trim()
     msg.reply "Got it!"
 
+  #blog set <name> <url>
   robot.respond /blog set\s+([\w .\-]+)\s+(https?:\/\/[^\s]+)/i, (msg) ->
     name = msg.match[1].trim()
     users = robot.brain.usersForFuzzyName(name)
@@ -69,15 +83,15 @@ module.exports = (robot) ->
 sortResults = (err, results) ->
   if results.length > 1
     results = results.sort(compareDates);
-  
   results
 
 compareDates = (a,b) ->
-  if moment(a.date) < moment(b.date)
-    return -1
-  if moment(a.date) > moment(b.date)
-    return 1
-  return 0
+  if a?.date? and b?.date?
+    if moment(a.date) < moment(b.date)
+      return -1
+    if moment(a.date) > moment(b.date)
+      return 1
+    0
 
 loadAllFeeds = (robot, callback) ->
   blogFeedUrls = new Array()
@@ -86,13 +100,14 @@ loadAllFeeds = (robot, callback) ->
       blogFeedUrls.push(user.blogFeedUrl)
 
   async.map(blogFeedUrls, (feedUrl, callback) ->
-    loadRSSFeed(robot, feedUrl, (result) ->
-      callback null, result
+    loadRSSFeed(robot, feedUrl, (err,results) ->
+      callback err, results
     )
-  , (err, result) ->
-    if err 
-      console.log next err
-    sorted = sortResults err,result
+  , (err, results) ->
+    results = results.filter((n) ->
+      n?
+    )
+    sorted = sortResults err,results
     callback err, sorted
   )
 
@@ -105,6 +120,9 @@ loadRSSFeed = (robot, q, callback) ->
         callback "#{result.error}"
         return
 
-      entry = result.responseData.feed.entries[0];
-      response = {author: entry.author, date: entry.publishedDate, title: entry.title}
-      callback response
+      if result?.responseData?.feed?.entries[0]?
+        entry = result.responseData.feed.entries[0];
+        response = {author: entry.author, date: entry.publishedDate, title: entry.title}
+        callback null, response
+      else
+        callback "#{result.error}", null
