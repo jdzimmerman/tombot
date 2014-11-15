@@ -40,7 +40,9 @@
         "xml2js": "0.1.14",
         "wolfram": "0.2.2",
         "wwwdude": "0.1.0",
-        "hipchat-client": "0.0.9"
+        "hipchat-client": "0.0.9",
+        "moment": "~2.8.3",
+        "async": "~0.9.0"
     },
     "engines": {
         "node": "= 0.8.21",
