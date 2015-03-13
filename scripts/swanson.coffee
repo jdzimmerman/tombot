@@ -17,7 +17,7 @@
 
 module.exports = (robot) ->
   robot.respond /swanson me$/i, (msg) ->
-   images = [
+    images = [
       "http://media.giphy.com/media/Be7iMvNVSPL7G/giphy.gif",
       "http://media.giphy.com/media/A6zNIVa9ggyWc/giphy.gif",
       "http://media.giphy.com/media/WET7HHGLaYec0/giphy.gif",
